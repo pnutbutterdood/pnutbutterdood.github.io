@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en" class="dark">
 <head>
@@ -54,7 +55,7 @@
             <div class="bg-gradient-to-r from-blue-900/40 via-slate-900 to-indigo-950/40 border border-blue-500/20 rounded-2xl p-6 sm:p-8 shadow-xl">
                 <h2 class="text-2xl sm:text-3xl font-extrabold text-white mb-3">Welcome to your CDL-A Study Hub!</h2>
                 <p class="text-slate-300 text-sm sm:text-base max-w-3xl leading-relaxed">
-                    Prepare thoroughly for your Michigan Commercial Driver's License written examinations. This app features over 80 detailed multiple-choice questions curated directly from the Michigan CDL Manual, complete with highlighted manual reference quotes, timed practice simulations, flashcards, and essential quick-reference values.
+                    Prepare thoroughly for your Michigan Commercial Driver's License written examinations. This app features over 90 detailed multiple-choice questions curated directly from the Michigan CDL Manual, complete with highlighted manual reference quotes, timed practice simulations, randomized flashcards for every question, and essential quick-reference values.
                 </p>
                 <div class="mt-6 flex flex-wrap gap-4">
                     <button onclick="switchTab('quiz'); startTimedQuiz(25);" class="bg-blue-600 hover:bg-blue-500 text-white font-bold px-6 py-3 rounded-xl shadow-lg transition transform hover:-translate-y-0.5 flex items-center gap-2">
@@ -71,16 +72,16 @@
                 <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 shadow-md flex items-center justify-between">
                     <div>
                         <p class="text-xs uppercase tracking-wider text-slate-400 font-medium">Total Questions</p>
-                        <h3 class="text-3xl font-extrabold text-white mt-1" id="stat-total-q">84</h3>
+                        <h3 class="text-3xl font-extrabold text-white mt-1" id="stat-total-q">92</h3>
                     </div>
                     <div class="p-3 bg-blue-500/10 text-blue-400 rounded-xl text-2xl border border-blue-500/20">📚</div>
                 </div>
                 <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 shadow-md flex items-center justify-between">
                     <div>
-                        <p class="text-xs uppercase tracking-wider text-slate-400 font-medium">Modules Covered</p>
-                        <h3 class="text-3xl font-extrabold text-white mt-1">Sections 1-9</h3>
+                        <p class="text-xs uppercase tracking-wider text-slate-400 font-medium">Flashcards Available</p>
+                        <h3 class="text-3xl font-extrabold text-white mt-1">92</h3>
                     </div>
-                    <div class="p-3 bg-emerald-500/10 text-emerald-400 rounded-xl text-2xl border border-emerald-500/20">🎯</div>
+                    <div class="p-3 bg-emerald-500/10 text-emerald-400 rounded-xl text-2xl border border-emerald-500/20">🗂️</div>
                 </div>
                 <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 shadow-md flex items-center justify-between">
                     <div>
@@ -109,13 +110,13 @@
                     </div>
                     <div onclick="switchTab('flashcards')" class="bg-slate-900 hover:bg-slate-850 border border-slate-800 hover:border-slate-700 p-5 rounded-xl cursor-pointer transition shadow-md group">
                         <div class="text-emerald-400 text-2xl mb-2 group-hover:scale-110 transition-transform">🗂️</div>
-                        <h4 class="font-bold text-white text-base">Interactive Flashcards</h4>
-                        <p class="text-xs text-slate-400 mt-1">Flip through key rules, numbers, and definitions to memorize fast.</p>
+                        <h4 class="font-bold text-white text-base">Randomized Flashcards</h4>
+                        <p class="text-xs text-slate-400 mt-1">Full deck of 92 flashcards randomized every time for fast memorization.</p>
                     </div>
                     <div onclick="switchTab('quick-study')" class="bg-slate-900 hover:bg-slate-850 border border-slate-800 hover:border-slate-700 p-5 rounded-xl cursor-pointer transition shadow-md group">
                         <div class="text-amber-400 text-2xl mb-2 group-hover:scale-110 transition-transform">💡</div>
                         <h4 class="font-bold text-white text-base">Quick Study Cheatsheet</h4>
-                        <p class="text-xs text-slate-400 mt-1">Review critical air pressures, stopping distances, and key definitions.</p>
+                        <p class="text-xs text-slate-400 mt-1">Review confirmed air leak rates, undivided road triangles, and penalties.</p>
                     </div>
                 </div>
             </div>
@@ -206,19 +207,25 @@
 
         <!-- FLASHCARDS TAB -->
         <section id="tab-flashcards" class="hidden space-y-6 max-w-xl mx-auto">
-            <div class="text-center">
-                <h2 class="text-2xl font-bold text-white">Interactive Flashcards</h2>
-                <p class="text-xs text-slate-400 mt-1">Click the card to flip between question and answer.</p>
+            <div class="text-center flex justify-between items-center">
+                <div>
+                    <h2 class="text-2xl font-bold text-white text-left">Randomized Flashcards</h2>
+                    <p class="text-xs text-slate-400 mt-1 text-left">All 92 question bank items randomized for dynamic study.</p>
+                </div>
+                <button onclick="initFlashcards()" class="bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs text-blue-400 font-semibold px-3.5 py-2 rounded-xl transition flex items-center gap-1.5">
+                    <span>🔀</span> Shuffle Deck
+                </button>
             </div>
 
             <div class="perspective-1000 w-full h-80 cursor-pointer" onclick="flipFlashcard()">
                 <div id="flashcard-inner" class="relative w-full h-full duration-500 transform-style-3d bg-slate-900 border border-slate-800 rounded-2xl shadow-xl p-8 flex flex-col justify-between items-center text-center select-none hover:border-slate-700 transition">
                     <div class="w-full flex justify-between items-center text-xs text-slate-400">
                         <span id="fc-section" class="bg-blue-500/10 text-blue-400 px-2.5 py-1 rounded-full border border-blue-500/20 font-medium">Section 5</span>
-                        <span id="fc-counter">Card 1 of 15</span>
+                        <span id="fc-counter">Card 1 of 92</span>
                     </div>
-                    <div class="my-auto">
+                    <div class="my-auto space-y-2">
                         <h3 id="fc-content" class="text-lg sm:text-xl font-bold text-white leading-relaxed">What is the minimum legal tread depth for front steering axle tires?</h3>
+                        <p id="fc-ref" class="text-xs text-blue-400 italic hidden"></p>
                     </div>
                     <div class="text-xs text-blue-400 font-semibold tracking-wide uppercase">Click to flip card 🔄</div>
                 </div>
@@ -235,7 +242,7 @@
             <div class="bg-slate-900 p-6 rounded-2xl border border-slate-800 shadow-md flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
                 <div>
                     <h2 class="text-xl font-bold text-white">Complete Question Bank</h2>
-                    <p class="text-xs text-slate-400 mt-1">Browse all 84 available CDL-A and Air Brakes questions with manual quote highlights.</p>
+                    <p class="text-xs text-slate-400 mt-1">Browse all 92 available CDL-A and Air Brakes questions with manual quote highlights.</p>
                 </div>
                 <div class="w-full sm:w-72">
                     <input type="text" id="question-search" oninput="filterQuestionBank()" placeholder="Search keywords..." class="bg-slate-950 border border-slate-700 text-white rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 w-full">
@@ -248,36 +255,57 @@
         </section>
 
         <!-- QUICK STUDY CHEATSHEET TAB -->
-        <section id="tab-quick-study" class="hidden space-y-6 max-w-4xl mx-auto">
+        <section id="tab-quick-study" class="hidden space-y-6 max-w-5xl mx-auto">
             <div class="bg-slate-900 p-6 rounded-2xl border border-slate-800 shadow-md">
                 <h2 class="text-xl font-bold text-white mb-2">Quick Study Cheatsheet</h2>
-                <p class="text-xs text-slate-400">Essential air pressure figures, stopping distances, and key definitions from the official Michigan CDL Manual.</p>
+                <p class="text-xs text-slate-400">Essential air pressure figures, leak rates, confirmed undivided highway triangles, fire extinguisher classes, and CDL suspension rules from the official Michigan CDL Manual.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- Air Brakes Numbers -->
+                <!-- Air Brakes Pressures & Leak Rates -->
                 <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-md space-y-4">
-                    <h3 class="font-bold text-blue-400 text-base flex items-center gap-2"><span>🛑</span> Air Brakes Numbers & Pressures</h3>
+                    <h3 class="font-bold text-blue-400 text-base flex items-center gap-2"><span>🛑</span> Air Brakes Pressures & Leak Tests</h3>
                     <ul class="space-y-2 text-sm text-slate-300">
                         <li class="bg-slate-950 p-3 rounded-xl border border-slate-800 flex justify-between"><span>Governor Cut-out:</span> <strong class="text-white">120 - 140 psi</strong></li>
                         <li class="bg-slate-950 p-3 rounded-xl border border-slate-800 flex justify-between"><span>Governor Cut-in:</span> <strong class="text-white">~100 psi</strong></li>
                         <li class="bg-slate-950 p-3 rounded-xl border border-slate-800 flex justify-between"><span>Low Air Pressure Warning:</span> <strong class="text-white">Below 60 psi</strong></li>
                         <li class="bg-slate-950 p-3 rounded-xl border border-slate-800 flex justify-between"><span>Spring Brakes Pop Out (Automatic):</span> <strong class="text-white">20 - 45 psi</strong></li>
-                        <li class="bg-slate-950 p-3 rounded-xl border border-slate-800 flex justify-between"><span>Air Leak Rate (Single Vehicle):</span> <strong class="text-white">&lt; 2 psi / min</strong></li>
-                        <li class="bg-slate-950 p-3 rounded-xl border border-slate-800 flex justify-between"><span>Air Leak Rate (Combination):</span> <strong class="text-white">&lt; 3 psi / min</strong></li>
+                        <li class="bg-slate-950 p-3 rounded-xl border border-slate-800 flex justify-between"><span>Single Vehicle Leak Rate (Engine Off, Brakes Applied):</span> <strong class="text-white">&lt; 3 psi / min</strong></li>
+                        <li class="bg-slate-950 p-3 rounded-xl border border-slate-800 flex justify-between"><span>Combination Leak Rate (Engine Off, Brakes Applied):</span> <strong class="text-white">&lt; 4 psi / min</strong></li>
+                        <li class="bg-slate-950 p-3 rounded-xl border border-slate-800 flex justify-between"><span>Static Air Loss Rate (Brakes Released):</span> <strong class="text-white">&lt; 2 psi/min (single) / &lt; 3 psi/min (combo)</strong></li>
                     </ul>
                 </div>
 
-                <!-- Tire Tread Depths & Distances -->
+                <!-- Emergency Triangles & Fire Extinguishers -->
                 <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-md space-y-4">
-                    <h3 class="font-bold text-emerald-400 text-base flex items-center gap-2"><span>🛞</span> Treads, Distances & Inspections</h3>
+                    <h3 class="font-bold text-emerald-400 text-base flex items-center gap-2"><span>⚠️</span> Triangles & Fire Extinguishers</h3>
                     <ul class="space-y-2 text-sm text-slate-300">
-                        <li class="bg-slate-950 p-3 rounded-xl border border-slate-800 flex justify-between"><span>Front Steering Tire Tread:</span> <strong class="text-white">At least 4/32 inch</strong></li>
-                        <li class="bg-slate-950 p-3 rounded-xl border border-slate-800 flex justify-between"><span>Other Tires Tread Depth:</span> <strong class="text-white">At least 2/32 inch</strong></li>
-                        <li class="bg-slate-950 p-3 rounded-xl border border-slate-800 flex justify-between"><span>Cargo Check Frequency:</span> <strong class="text-white">First 50 miles, then 150 mi / 3 hrs</strong></li>
-                        <li class="bg-slate-950 p-3 rounded-xl border border-slate-800 flex justify-between"><span>Reflective Triangles Placement:</span> <strong class="text-white">10 ft, 100 ft, 200 ft</strong></li>
-                        <li class="bg-slate-950 p-3 rounded-xl border border-slate-800 flex justify-between"><span>Air Brake Lag Distance at 55 MPH:</span> <strong class="text-white">Adds ~32 feet</strong></li>
+                        <li class="bg-slate-950 p-3 rounded-xl border border-slate-800 flex justify-between"><span>Divided / One-Way Highway Triangles:</span> <strong class="text-white">10 ft, 100 ft, 200 ft (back)</strong></li>
+                        <li class="bg-slate-950 p-3 rounded-xl border border-slate-800 flex justify-between"><span>Undivided / Two-Way Highway Triangles:</span> <strong class="text-white">10 ft (front/rear), 100 ft (back & ahead)</strong></li>
+                        <li class="bg-slate-950 p-3 rounded-xl border border-slate-800 flex justify-between"><span>Placarded Vehicle Fire Extinguisher:</span> <strong class="text-white">UL Rating 10 B:C or more</strong></li>
+                        <li class="bg-slate-950 p-3 rounded-xl border border-slate-800 flex justify-between"><span>Class A Fires (Wood, Paper):</span> <strong class="text-white">Extinguish by Cooling/Water</strong></li>
+                        <li class="bg-slate-950 p-3 rounded-xl border border-slate-800 flex justify-between"><span>Class B Fires (Gas, Oil, Grease):</span> <strong class="text-white">Smothering/CO2/Dry Chemical</strong></li>
+                        <li class="bg-slate-950 p-3 rounded-xl border border-slate-800 flex justify-between"><span>Class C Fires (Electrical):</span> <strong class="text-white">Non-conducting agents (NEVER water)</strong></li>
                     </ul>
+                </div>
+
+                <!-- CDL Violations & Suspensions -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-md space-y-4 md:col-span-2">
+                    <h3 class="font-bold text-amber-400 text-base flex items-center gap-2"><span>⚖️</span> CDL Major & Serious Violations & Suspensions</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-slate-300">
+                        <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 space-y-2">
+                            <strong class="text-white block text-sm border-b border-slate-800 pb-1">Major Offenses (DUI, Felony, Hit & Run)</strong>
+                            <p class="text-xs"><strong>1st Conviction:</strong> 1-year suspension (3 years if transporting Hazmat).</p>
+                            <p class="text-xs"><strong>2nd Conviction:</strong> Minimum 10-year revocation.</p>
+                            <p class="text-xs"><strong>Controlled Substance Felony / Human Trafficking:</strong> Lifetime revocation.</p>
+                        </div>
+                        <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 space-y-2">
+                            <strong class="text-white block text-sm border-b border-slate-800 pb-1">Serious Traffic Violations (Speeding, Tailgating)</strong>
+                            <p class="text-xs"><strong>2 Convictions within 3 years:</strong> 60 days suspension.</p>
+                            <p class="text-xs"><strong>3+ Convictions within 3 years:</strong> 120 days suspension.</p>
+                            <p class="text-xs"><strong>Railroad Crossing (1st / 2nd / 3rd):</strong> 60 days / 120 days / 1 year suspension.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -293,7 +321,7 @@
 
     <!-- Application Script -->
     <script>
-        // Comprehensive Question Bank with Official Manual Quote Excerpts
+        // Comprehensive Question Bank (92 Questions spanning Sections 1-9 with manual quotes)
         const questions = [
             // Section 1
             {
@@ -442,6 +470,16 @@
                 id: 15,
                 section: "Sec 2",
                 sectionName: "Section 2: Driving Safely",
+                question: "Where should you place your emergency warning triangles if you stop on a one-way or divided highway?",
+                options: ["10 feet, 100 feet, and 200 feet toward approaching traffic", "10 feet, 50 feet, and 100 feet", "Only 100 feet behind", "100 feet and 500 feet"],
+                answer: 0,
+                ref: "Section 2, Page 31",
+                quote: "If you must stop on or by a one-way or divided highway, place warning devices 10 feet, 100 feet, and 200 feet toward the approaching traffic."
+            },
+            {
+                id: 16,
+                section: "Sec 2",
+                sectionName: "Section 2: Driving Safely",
                 question: "What three components make up total stopping distance?",
                 options: ["Braking + Skid + Reaction", "Perception + Reaction + Braking", "Speed + Weight + Distance", "Reaction + Friction + Lag"],
                 answer: 1,
@@ -449,7 +487,7 @@
                 quote: "Perception Distance + Reaction Distance + Braking Distance = Total Stopping Distance"
             },
             {
-                id: 16,
+                id: 17,
                 section: "Sec 2",
                 sectionName: "Section 2: Driving Safely",
                 question: "At 55 mph on dry pavement, what is the approximate total stopping distance for a heavy vehicle?",
@@ -459,7 +497,7 @@
                 quote: "At 55 mph, your vehicle will travel a minimum of 419 feet."
             },
             {
-                id: 17,
+                id: 18,
                 section: "Sec 2",
                 sectionName: "Section 2: Driving Safely",
                 question: "What is hydroplaning?",
@@ -469,7 +507,7 @@
                 quote: "When this happens, your vehicle can hydroplane. It's like water skiing--the tires lose their contact with the road and have little or no traction."
             },
             {
-                id: 18,
+                id: 19,
                 section: "Sec 2",
                 sectionName: "Section 2: Driving Safely",
                 question: "What is 'black ice'?",
@@ -479,7 +517,7 @@
                 quote: "Black Ice. Black ice is a thin layer that is clear enough that you can see the road underneath it. It makes the road look wet."
             },
             {
-                id: 19,
+                id: 20,
                 section: "Sec 2",
                 sectionName: "Section 2: Driving Safely",
                 question: "What is the recommended following distance for a vehicle under 40 mph?",
@@ -489,7 +527,7 @@
                 quote: "One good rule says you need at least one second for each 10 feet of vehicle length at speeds below 40 mph."
             },
             {
-                id: 20,
+                id: 21,
                 section: "Sec 2",
                 sectionName: "Section 2: Driving Safely",
                 question: "What is the penalty for CMV drivers caught texting while driving?",
@@ -499,7 +537,7 @@
                 quote: "Your CDL will be disqualified after two or more convictions of any state law on texting while operating a CMV... civil penalties imposed on such drivers, in an amount up to $2,750."
             },
             {
-                id: 21,
+                id: 22,
                 section: "Sec 2",
                 sectionName: "Section 2: Driving Safely",
                 question: "What is the proper procedure if your front tire fails?",
@@ -509,7 +547,7 @@
                 quote: "Hold the Steering Wheel Firmly... Unless you're about to run into something, stay off the brake until the vehicle has slowed down. Then brake very gently, pull off the road, and stop."
             },
             {
-                id: 22,
+                id: 23,
                 section: "Sec 2",
                 sectionName: "Section 2: Driving Safely",
                 question: "What type of fire extinguisher is required on the power unit of placarded vehicles?",
@@ -521,7 +559,7 @@
 
             // Section 3
             {
-                id: 23,
+                id: 24,
                 section: "Sec 3",
                 sectionName: "Section 3: Transporting Cargo Safely",
                 question: "When must you inspect your cargo and securing devices after beginning a trip?",
@@ -531,7 +569,7 @@
                 quote: "Inspect the cargo and its securing devices again within the first 50 miles after beginning a trip."
             },
             {
-                id: 24,
+                id: 25,
                 section: "Sec 3",
                 sectionName: "Section 3: Transporting Cargo Safely",
                 question: "How often must cargo tie-downs and securement be re-checked during a trip?",
@@ -541,7 +579,7 @@
                 quote: "Re-check the cargo and securing devices as often as necessary during a trip to keep the load secure. You need to inspect again: After you have driven for 3 hours or 150 miles. After every break you take during driving."
             },
             {
-                id: 25,
+                id: 26,
                 section: "Sec 3",
                 sectionName: "Section 3: Transporting Cargo Safely",
                 question: "What is the minimum number of tie-downs required for any flatbed load regardless of size?",
@@ -551,7 +589,7 @@
                 quote: "No matter how small the cargo, it should have at least two tie-downs."
             },
             {
-                id: 26,
+                id: 27,
                 section: "Sec 3",
                 sectionName: "Section 3: Transporting Cargo Safely",
                 question: "What is the general rule for the number of tie-downs based on cargo length?",
@@ -561,7 +599,7 @@
                 quote: "Cargo should have at least one tie-down for each ten feet of cargo."
             },
             {
-                id: 27,
+                id: 28,
                 section: "Sec 3",
                 sectionName: "Section 3: Transporting Cargo Safely",
                 question: "Why is a high center of gravity dangerous for a loaded truck?",
@@ -573,7 +611,7 @@
 
             // Section 4
             {
-                id: 28,
+                id: 29,
                 section: "Sec 4",
                 sectionName: "Section 4: Transporting Passengers Safely",
                 question: "What is the 'standee line' on a bus?",
@@ -583,7 +621,7 @@
                 quote: "Buses designed to allow standing must have a two-inch line on the floor or some other means of showing riders where they cannot stand. This is called the standee line."
             },
             {
-                id: 29,
+                id: 30,
                 section: "Sec 4",
                 sectionName: "Section 4: Transporting Passengers Safely",
                 question: "What is the maximum total weight of allowed hazardous materials a bus may carry?",
@@ -593,7 +631,7 @@
                 quote: "More than 500 pounds total of allowed hazardous materials, and no more than 100 pounds of any one class."
             },
             {
-                id: 30,
+                id: 31,
                 section: "Sec 4",
                 sectionName: "Section 4: Transporting Passengers Safely",
                 question: "How far from a railroad crossing must a bus stop before crossing?",
@@ -605,7 +643,7 @@
 
             // Section 5 (Air Brakes)
             {
-                id: 31,
+                id: 32,
                 section: "Sec 5",
                 sectionName: "Section 5: Air Brakes",
                 question: "At what pressure should the air compressor governor cut-out air pumping?",
@@ -615,7 +653,7 @@
                 quote: "When air tank pressure rises to the 'cut-out' level (around 125 pounds per-square-inch or 'psi'), the governor stops the compressor from pumping air."
             },
             {
-                id: 32,
+                id: 33,
                 section: "Sec 5",
                 sectionName: "Section 5: Air Brakes",
                 question: "What is the normal air compressor governor cut-in pressure?",
@@ -625,7 +663,7 @@
                 quote: "When the tank pressure falls to the 'cut-in' pressure (around 100 psi), the governor allows the compressor to start pumping again."
             },
             {
-                id: 33,
+                id: 34,
                 section: "Sec 5",
                 sectionName: "Section 5: Air Brakes",
                 question: "At what air tank pressure must the low air pressure warning signal come on?",
@@ -635,7 +673,7 @@
                 quote: "A warning signal you can see must come on before the air pressure in the tanks falls below 60 psi."
             },
             {
-                id: 34,
+                id: 35,
                 section: "Sec 5",
                 sectionName: "Section 5: Air Brakes",
                 question: "What force holds spring brakes on when air pressure is lost?",
@@ -645,7 +683,7 @@
                 quote: "They must be held on by mechanical force (because air pressure can eventually leak away). Spring brakes are usually used to meet these needs. When driving, powerful springs are held back by air pressure."
             },
             {
-                id: 35,
+                id: 36,
                 section: "Sec 5",
                 sectionName: "Section 5: Air Brakes",
                 question: "At what pressure range do spring brakes typically come on automatically?",
@@ -655,17 +693,17 @@
                 quote: "Tractor and straight truck spring brakes will come fully on when air pressure drops to a range of 20 to 45 psi..."
             },
             {
-                id: 36,
+                id: 37,
                 section: "Sec 5",
                 sectionName: "Section 5: Air Brakes",
                 question: "What is the maximum allowable air leakage rate for a single vehicle with the engine off and brakes applied?",
-                options: ["1 psi per minute", "2 psi in one minute", "3 psi in one minute", "5 psi in one minute"],
+                options: ["1 psi per minute", "3 psi in one minute", "5 psi in one minute", "10 psi in one minute"],
                 answer: 1,
                 ref: "Section 5, Page 76",
-                quote: "The loss rate should be less than two psi in one minute for single vehicles and less than three psi in one minute for combination vehicles."
+                quote: "Check the air gauge to see if the air pressure drops more than three pounds in one minute (single vehicle) or four pounds in one minute (combination vehicle)."
             },
             {
-                id: 37,
+                id: 38,
                 section: "Sec 5",
                 sectionName: "Section 5: Air Brakes",
                 question: "What is the maximum allowable air leakage rate for a combination vehicle with the engine off and brakes applied?",
@@ -675,7 +713,17 @@
                 quote: "Check the air gauge to see if the air pressure drops more than three pounds in one minute (single vehicle) or four pounds in one minute (combination vehicle)."
             },
             {
-                id: 38,
+                id: 39,
+                section: "Sec 5",
+                sectionName: "Section 5: Air Brakes",
+                question: "What is the maximum allowable static air leakage rate with engine off and brakes released?",
+                options: ["< 2 psi/min (single) and < 3 psi/min (combo)", "< 5 psi/min", "< 10 psi/min", "No leakage allowed"],
+                answer: 0,
+                ref: "Section 5, Page 76",
+                quote: "The loss rate should be less than two psi in one minute for single vehicles and less than three psi in one minute for combination vehicles."
+            },
+            {
+                id: 40,
                 section: "Sec 5",
                 sectionName: "Section 5: Air Brakes",
                 question: "What adds 'brake lag' to air brakes compared to hydraulic brakes?",
@@ -685,7 +733,7 @@
                 quote: "This is the time required for the brakes to work after the brake pedal is pushed... it takes a little time (one half second or more) for the air to flow through the lines to the brakes."
             },
             {
-                id: 39,
+                id: 41,
                 section: "Sec 5",
                 sectionName: "Section 5: Air Brakes",
                 question: "How much additional stopping distance does air brake lag add at 55 mph?",
@@ -695,7 +743,7 @@
                 quote: "The air brake lag distance at 55 mph on dry pavement adds about 32 feet."
             },
             {
-                id: 40,
+                id: 42,
                 section: "Sec 5",
                 sectionName: "Section 5: Air Brakes",
                 question: "Why should you drain your air storage tanks daily?",
@@ -705,7 +753,7 @@
                 quote: "For example, the water can freeze in cold weather and cause brake failure. The water and oil tend to collect in the bottom of the air tank. Be sure that you drain the air tanks completely."
             },
             {
-                id: 41,
+                id: 43,
                 section: "Sec 5",
                 sectionName: "Section 5: Air Brakes",
                 question: "What is the safety valve on the air tank typically set to open at?",
@@ -715,7 +763,7 @@
                 quote: "The safety valve protects the tank and the rest of the system from too much pressure. The valve is usually set to open at 150 psi."
             },
             {
-                id: 42,
+                id: 44,
                 section: "Sec 5",
                 sectionName: "Section 5: Air Brakes",
                 question: "What is an S-cam brake?",
@@ -725,7 +773,7 @@
                 quote: "The s-cam forces the brake shoes away from one another and presses them against the inside of the brake drum."
             },
             {
-                id: 43,
+                id: 45,
                 section: "Sec 5",
                 sectionName: "Section 5: Air Brakes",
                 question: "What is the most common problem found in roadside inspections regarding air brakes?",
@@ -735,7 +783,7 @@
                 quote: "Out-of-adjustment brakes are the most common problem found in roadside inspections."
             },
             {
-                id: 44,
+                id: 46,
                 section: "Sec 5",
                 sectionName: "Section 5: Air Brakes",
                 question: "In a dual air brake system, what pressure must be built up in both systems before driving?",
@@ -747,7 +795,7 @@
 
             // Section 6 (Combination Vehicles)
             {
-                id: 45,
+                id: 47,
                 section: "Sec 6",
                 sectionName: "Section 6: Combination Vehicles",
                 question: "What is the primary cause of truck driver deaths in crashes?",
@@ -757,7 +805,7 @@
                 quote: "More than half of truck driver deaths in crashes are the result of truck rollovers."
             },
             {
-                id: 46,
+                id: 48,
                 section: "Sec 6",
                 sectionName: "Section 6: Combination Vehicles",
                 question: "What is 'rearward amplification' or the 'crack-the-whip' effect?",
@@ -767,7 +815,7 @@
                 quote: "'Rearward amplification' causes the crack-the-whip effect... the last trailer in a combination is most likely to turn over."
             },
             {
-                id: 47,
+                id: 49,
                 section: "Sec 6",
                 sectionName: "Section 6: Combination Vehicles",
                 question: "When backing a trailer, which way do you turn the top of the steering wheel to make the trailer go left?",
@@ -777,7 +825,7 @@
                 quote: "When backing a car, straight truck, or bus, you turn the top of the steering wheel in the direction you want to go. When backing a trailer, you turn the steering wheel in the opposite direction."
             },
             {
-                id: 48,
+                id: 50,
                 section: "Sec 6",
                 sectionName: "Section 6: Combination Vehicles",
                 question: "What color is typically used for the emergency (supply) air line and glad hands?",
@@ -787,7 +835,7 @@
                 quote: "Emergency lines are often coded with the color red (red hose, red couplers, or other parts)..."
             },
             {
-                id: 49,
+                id: 51,
                 section: "Sec 6",
                 sectionName: "Section 6: Combination Vehicles",
                 question: "What color is typically used for the service air line?",
@@ -797,7 +845,7 @@
                 quote: "Sometimes, metal tags are attached to the lines with the words 'service' and 'emergency' stamped on them... Blue is used for the service lines and red for the emergency (supply) lines."
             },
             {
-                id: 50,
+                id: 52,
                 section: "Sec 6",
                 sectionName: "Section 6: Combination Vehicles",
                 question: "What should you do if you cross the air lines when coupling a trailer?",
@@ -807,7 +855,7 @@
                 quote: "If you do cross the air lines, supply air will be sent to the service line instead of going to charge the trailer air tanks. Air will not be available to release the trailer spring brakes... Always test the trailer brakes before driving..."
             },
             {
-                id: 51,
+                id: 53,
                 section: "Sec 6",
                 sectionName: "Section 6: Combination Vehicles",
                 question: "When coupling a tractor-semitrailer, how much space should there be between the upper and lower fifth wheel?",
@@ -817,7 +865,7 @@
                 quote: "Make sure there is no space between upper and lower fifth wheel. If there is space, something is wrong..."
             },
             {
-                id: 52,
+                id: 54,
                 section: "Sec 6",
                 sectionName: "Section 6: Combination Vehicles",
                 question: "Which part of the kingpin should the fifth wheel locking jaws close around?",
@@ -829,7 +877,7 @@
 
             // Section 7
             {
-                id: 53,
+                id: 55,
                 section: "Sec 7",
                 sectionName: "Section 7: Doubles and Triples",
                 question: "What is a converter dolly?",
@@ -839,7 +887,7 @@
                 quote: "A converter gear on a dolly is a coupling device of one or two axles and a fifth wheel by which a semitrailer can be coupled to the rear of a tractor-trailer combination forming a double bottom rig."
             },
             {
-                id: 54,
+                id: 56,
                 section: "Sec 7",
                 sectionName: "Section 7: Doubles and Triples",
                 question: "In a set of doubles, which trailer should be heavier?",
@@ -849,7 +897,7 @@
                 quote: "For the safest handling on the road, the more heavily loaded semitrailer should be in first position behind the tractor. The lighter trailer should be in the rear."
             },
             {
-                id: 55,
+                id: 57,
                 section: "Sec 7",
                 sectionName: "Section 7: Doubles and Triples",
                 question: "Should the shut-off valves on the rear of the last trailer in a set of doubles be open or closed?",
@@ -861,7 +909,7 @@
 
             // Section 8
             {
-                id: 56,
+                id: 58,
                 section: "Sec 8",
                 sectionName: "Section 8: Tank Vehicles",
                 question: "When is a tank endorsement required?",
@@ -871,7 +919,7 @@
                 quote: "A tank endorsement is required if your vehicle needs a Class A or B CDL and you want to haul a liquid or liquid gas in a tank or tanks having an individual rated capacity of more than 119 gallons and an aggregate rated capacity of 1000 gallons or more..."
             },
             {
-                id: 57,
+                id: 59,
                 section: "Sec 8",
                 sectionName: "Section 8: Tank Vehicles",
                 question: "What is 'liquid surge' in a tanker?",
@@ -881,7 +929,7 @@
                 quote: "Liquid surge results from movement of the liquid in partially filled tanks. This movement can have bad effects on handling."
             },
             {
-                id: 58,
+                id: 60,
                 section: "Sec 8",
                 sectionName: "Section 8: Tank Vehicles",
                 question: "Why do un-baffled ('smooth bore') tankers require extreme caution?",
@@ -891,7 +939,7 @@
                 quote: "Un-baffled liquid tankers (sometimes called 'smooth bore' tanks) have nothing inside to slow down the flow of the liquid. Therefore, forward-and-back surge is very strong."
             },
             {
-                id: 59,
+                id: 61,
                 section: "Sec 8",
                 sectionName: "Section 8: Tank Vehicles",
                 question: "What is 'outage' when loading a tanker?",
@@ -903,7 +951,7 @@
 
             // Section 9
             {
-                id: 60,
+                id: 62,
                 section: "Sec 9",
                 sectionName: "Section 9: Hazardous Materials",
                 question: "What are the three main purposes of hazardous materials regulations?",
@@ -913,7 +961,7 @@
                 quote: "The intent of the rules is to: Contain the product. Communicate the risk. Ensure safe drivers and equipment."
             },
             {
-                id: 61,
+                id: 63,
                 section: "Sec 9",
                 sectionName: "Section 9: Hazardous Materials",
                 question: "How many identical placards must be displayed on a placarded vehicle carrying hazardous materials?",
@@ -923,7 +971,7 @@
                 quote: "A placarded vehicle must have at least four identical placards. They are put on the front, rear, and both sides."
             },
             {
-                id: 62,
+                id: 64,
                 section: "Sec 9",
                 sectionName: "Section 9: Hazardous Materials",
                 question: "When must Table 1 hazardous materials be placarded?",
@@ -933,7 +981,7 @@
                 quote: "Table 1 materials must be placarded whenever any amount is transported."
             },
             {
-                id: 63,
+                id: 65,
                 section: "Sec 9",
                 sectionName: "Section 9: Hazardous Materials",
                 question: "Except for bulk packaging, when do Table 2 hazardous materials require placards?",
@@ -943,7 +991,7 @@
                 quote: "Except for bulk packaging, the hazard classes in Table 2 need placards only if the total amount transported is 1,001 pounds or more including the package."
             },
             {
-                id: 64,
+                id: 66,
                 section: "Sec 9",
                 sectionName: "Section 9: Hazardous Materials",
                 question: "Can you use burning flares around a vehicle loaded with Division 1.1, 1.2, or 1.3 explosives or flammable liquids/gases?",
@@ -953,9 +1001,9 @@
                 quote: "Never use burning signals, such as flares or fuses, around a: Tank used for Class 3 (Flammable Liquids) or Division 2.1 (Flammable Gas)... Vehicle loaded with Division 1.1, 1.2, or 1.3 Explosives."
             },
 
-            // Additional Questions to ensure 80+ count and robustness
+            // Additional Questions for Robust Depth
             {
-                id: 65,
+                id: 67,
                 section: "Sec 2",
                 sectionName: "Section 2: Driving Safely",
                 question: "What is the primary cause of injury and death in roadway work zones?",
@@ -965,7 +1013,7 @@
                 quote: "Speeding traffic is the number one cause of injury and death in roadway work zones."
             },
             {
-                id: 66,
+                id: 68,
                 section: "Sec 2",
                 sectionName: "Section 2: Driving Safely",
                 question: "What should you do if your vehicle begins to hydroplane?",
@@ -975,7 +1023,7 @@
                 quote: "You can regain control by releasing the accelerator and pushing in the clutch. This will slow your vehicle and let the wheels turn freely. If the vehicle is hydroplaning, do not use the brakes to slow down."
             },
             {
-                id: 67,
+                id: 69,
                 section: "Sec 5",
                 sectionName: "Section 5: Air Brakes",
                 question: "Why should you never push down on the brake pedal when the spring brakes are on?",
@@ -985,7 +1033,7 @@
                 quote: "Never push the brake pedal down when the spring brakes are on. If you do, the brakes could be damaged by the combined forces of the springs and the air pressure."
             },
             {
-                id: 68,
+                id: 70,
                 section: "Sec 5",
                 sectionName: "Section 5: Air Brakes",
                 question: "What is 'controlled braking' during an emergency stop?",
@@ -995,7 +1043,7 @@
                 quote: "With this method, you apply the brakes as hard as you can without locking the wheels. Keep steering wheel movements very small while doing this."
             },
             {
-                id: 69,
+                id: 71,
                 section: "Sec 5",
                 sectionName: "Section 5: Air Brakes",
                 question: "What is 'stab braking'?",
@@ -1005,7 +1053,7 @@
                 quote: "Apply your brakes all the way. Release brakes when wheels lock up. As soon as the wheels start rolling, apply the brakes fully again."
             },
             {
-                id: 70,
+                id: 72,
                 section: "Sec 2",
                 sectionName: "Section 2: Driving Safely",
                 question: "How do antilock braking systems (ABS) help you?",
@@ -1015,7 +1063,7 @@
                 quote: "ABS helps you avoid wheel lock up and maintain control. You may or may not be able to stop faster with ABS, but you should be able to steer around an obstacle while braking..."
             },
             {
-                id: 71,
+                id: 73,
                 section: "Sec 6",
                 sectionName: "Section 6: Combination Vehicles",
                 question: "What is the trailer hand valve (trolley valve) used for?",
@@ -1025,7 +1073,7 @@
                 quote: "The trailer hand valve... should be used only to test the trailer brakes. Do not use it in driving because of the danger of making the trailer skid."
             },
             {
-                id: 72,
+                id: 74,
                 section: "Sec 6",
                 sectionName: "Section 6: Combination Vehicles",
                 question: "What does the tractor protection valve do?",
@@ -1035,7 +1083,7 @@
                 quote: "The tractor protection valve keeps air in the tractor or truck brake system should the trailer break away or develop a bad leak."
             },
             {
-                id: 73,
+                id: 75,
                 section: "Sec 2",
                 sectionName: "Section 2: Driving Safely",
                 question: "What is the proper technique for braking on long, steep mountain downgrades?",
@@ -1045,7 +1093,7 @@
                 quote: "Apply the brakes just hard enough to feel a definite slowdown... When your speed has been reduced to approximately five mph below your 'safe' speed, release the brakes."
             },
             {
-                id: 74,
+                id: 76,
                 section: "Sec 2",
                 sectionName: "Section 2: Driving Safely",
                 question: "What causes brake fade on long downgrades?",
@@ -1055,7 +1103,7 @@
                 quote: "Brake fade results from excessive heat causing chemical changes in the brake lining, which reduce friction, and also causing expansion of the brake drums."
             },
             {
-                id: 75,
+                id: 77,
                 section: "Sec 1",
                 sectionName: "Section 1: Introduction",
                 question: "What is ELDT (Entry-Level Driver Training)?",
@@ -1065,7 +1113,7 @@
                 quote: "Beginning February 7, 2022, the Federal Motor Carrier Safety (FMCSA) requires customers applying for a first-time CDL or upgrading a CDL to complete Entry-Level Driver Training (ELDT) through an approved driver education provider."
             },
             {
-                id: 76,
+                id: 78,
                 section: "Sec 2",
                 sectionName: "Section 2: Driving Safely",
                 question: "What is the penalty for a CMV driver convicted of a second texting violation within 3 years?",
@@ -1075,7 +1123,7 @@
                 quote: "Your CDL will be disqualified after two or more convictions of any state law on texting while operating a CMV. Disqualification is 60 days for the second offense within 3 years..."
             },
             {
-                id: 77,
+                id: 79,
                 section: "Sec 2",
                 sectionName: "Section 2: Driving Safely",
                 question: "What is the odds multiplier for safety-critical events when a driver is texting while driving?",
@@ -1085,7 +1133,7 @@
                 quote: "Research shows that the odds of being involved in a safety-critical event... is 23.2 times greater for CMV drivers who engage in texting while driving than for those who do not."
             },
             {
-                id: 78,
+                id: 80,
                 section: "Sec 5",
                 sectionName: "Section 5: Air Brakes",
                 question: "Can you manually adjust automatic slack adjusters routinely?",
@@ -1095,7 +1143,7 @@
                 quote: "The manual adjustment of an automatic adjuster to bring a brake pushrod stroke within legal limits is generally masking a mechanical problem and is not fixing it... The manual adjustment of automatic slack adjusters is dangerous..."
             },
             {
-                id: 79,
+                id: 81,
                 section: "Sec 3",
                 sectionName: "Section 3: Transporting Cargo Safely",
                 question: "What is the aggregate working load limit of tie-down securement systems required by federal regulations?",
@@ -1105,7 +1153,7 @@
                 quote: "Federal regulations require the aggregate working load limit of any securement system used to secure an article... to be at least one-half times the weight of the article or group of articles."
             },
             {
-                id: 80,
+                id: 82,
                 section: "Sec 9",
                 sectionName: "Section 9: Hazardous Materials",
                 question: "Where must hazardous materials shipping papers be kept while driving?",
@@ -1115,7 +1163,7 @@
                 quote: "Drivers to keep hazardous materials shipping papers: In a pouch on the driver's door, or In clear view within immediate reach while the seat belt is fastened while driving..."
             },
             {
-                id: 81,
+                id: 83,
                 section: "Sec 10",
                 sectionName: "Section 10: School Buses",
                 question: "What is the 'danger zone' around a school bus?",
@@ -1125,7 +1173,7 @@
                 quote: "The danger zone is the area on all sides of the bus where children are in the most danger... may extend as much as 30 feet from the front bumper... 10 feet from the left and right sides... and 10 feet behind the rear bumper."
             },
             {
-                id: 82,
+                id: 84,
                 section: "Sec 10",
                 sectionName: "Section 10: School Buses",
                 question: "How far away from students should a school bus stop when loading or unloading?",
@@ -1135,7 +1183,7 @@
                 quote: "Bring school bus to a full stop with the front bumper at least 10 feet away from students at the designated stop. This forces the students to walk to the bus so you have a better view of their movements."
             },
             {
-                id: 83,
+                id: 85,
                 section: "Sec 2",
                 sectionName: "Section 2: Driving Safely",
                 question: "What is the average reaction time for an alert driver when seeing a hazard?",
@@ -1145,7 +1193,7 @@
                 quote: "The average driver has a reaction time of ¾ second to 1 second."
             },
             {
-                id: 84,
+                id: 86,
                 section: "Sec 5",
                 sectionName: "Section 5: Air Brakes",
                 question: "What is the purpose of the alcohol evaporator in some air brake systems?",
@@ -1153,27 +1201,80 @@
                 answer: 1,
                 ref: "Section 5, Page 71",
                 quote: "Some air brake systems have an alcohol evaporator to put alcohol into the air system. This helps to reduce the risk of ice in air brake valves and other parts during cold weather."
+            },
+            {
+                id: 87,
+                section: "Sec 5",
+                sectionName: "Section 5: Air Brakes",
+                question: "During the air leakage rate test, what is the maximum allowable pressure drop for a single vehicle with brakes applied for one minute?",
+                options: ["1 psi", "3 psi", "5 psi", "10 psi"],
+                answer: 1,
+                ref: "Section 5, Page 76",
+                quote: "Check the air gauge to see if the air pressure drops more than three pounds in one minute (single vehicle) or four pounds in one minute (combination vehicle)."
+            },
+            {
+                id: 88,
+                section: "Sec 5",
+                sectionName: "Section 5: Air Brakes",
+                question: "What is the purpose of the safety relief valve on the air tank?",
+                options: ["To release air when brakes are applied", "To protect the tank and system from too much pressure (usually opens at 150 psi)", "To drain water automatically", "To signal low air pressure"],
+                answer: 1,
+                ref: "Section 5, Page 71 & 72",
+                quote: "The safety valve protects the tank and the rest of the system from too much pressure. The valve is usually set to open at 150 psi."
+            },
+            {
+                id: 89,
+                section: "Sec 2",
+                sectionName: "Section 2: Driving Safely",
+                question: "What class of fire extinguisher is recommended for electrical equipment fires?",
+                options: ["Class A (Water)", "Class B (Foam)", "Class C (Non-conducting agents like CO2 or dry chemical)", "Class D (Special powder)"],
+                answer: 2,
+                ref: "Section 2, Page 57",
+                quote: "Class C: Electrical equipment fires. Extinguish with Non-conducting Agents such as Carbon Dioxide or Dry Chemicals. DO NOT USE WATER."
+            },
+            {
+                id: 90,
+                section: "Sec 1",
+                sectionName: "Section 1: Introduction",
+                question: "What is the CDL suspension penalty for a second conviction of a serious traffic violation within a 3-year period?",
+                options: ["30 days", "60 days", "120 days", "1 year"],
+                answer: 1,
+                ref: "Section 1, Page 11",
+                quote: "If charged and convicted for any of the serious traffic violations while operating a CMV... Two convictions, separate incidents within 3 years: 60 days"
+            },
+            {
+                id: 91,
+                section: "Sec 2",
+                sectionName: "Section 2: Driving Safely",
+                question: "What should you never use around a vehicle loaded with Class 3 flammable liquids or Division 1.1 explosives?",
+                options: ["Emergency flashers", "Burning signals such as flares or fuses", "Reflective triangles", "Flashlights"],
+                answer: 1,
+                ref: "Section 2, Page 57 & Section 9, Page 112",
+                quote: "Never use burning signals, such as flares or fuses, around a: Tank used for Class 3 (Flammable Liquids)... Vehicle loaded with Division 1.1, 1.2, or 1.3 Explosives."
+            },
+            {
+                id: 92,
+                section: "Sec 5",
+                sectionName: "Section 5: Air Brakes",
+                question: "When testing the low air pressure warning signal, at what pressure must the warning signal come on?",
+                options: ["Below 100 psi", "Below 80 psi", "Below 60 psi", "Below 30 psi"],
+                answer: 2,
+                ref: "Section 5, Page 72",
+                quote: "A warning signal you can see must come on before the air pressure in the tanks falls below 60 psi."
             }
         ];
 
-        // Flashcards Data
-        const flashcardsData = [
-            { section: "Section 5: Air Brakes", q: "Governor Cut-out Pressure", a: "120 - 140 psi (Air compressor stops pumping)" },
-            { section: "Section 5: Air Brakes", q: "Low Air Pressure Warning", a: "Must come on before pressure drops below 60 psi." },
-            { section: "Section 5: Air Brakes", q: "Spring Brakes Activation", a: "Spring brakes pop out automatically when pressure drops to 20 - 45 psi." },
-            { section: "Section 5: Air Brakes", q: "Max Air Leak Rate (Single Vehicle)", a: "Less than 2 psi in one minute (engine off, brakes applied)." },
-            { section: "Section 5: Air Brakes", q: "Max Air Leak Rate (Combination)", a: "Less than 3 psi in one minute (engine off, brakes applied)." },
-            { section: "Section 2: Driving Safely", q: "Front Steering Tire Minimum Tread Depth", a: "At least 4/32 inch in every major groove." },
-            { section: "Section 2: Driving Safely", q: "Other Tires Minimum Tread Depth", a: "At least 2/32 inch." },
-            { section: "Section 2: Driving Safely", q: "Emergency Triangles Placement (Divided Hwy)", a: "10 feet, 100 feet, and 200 feet toward approaching traffic." },
-            { section: "Section 2: Driving Safely", q: "Following Distance Rule", a: "1 second for every 10 feet of vehicle length under 40 mph; add 1 second above 40 mph." },
-            { section: "Section 3: Transporting Cargo", q: "Cargo Inspection Frequency", a: "First 50 miles, then every 150 miles or 3 hours (whichever comes first), and after every break." },
-            { section: "Section 3: Transporting Cargo", q: "Minimum Tie-downs for Any Load", a: "At least two tie-downs regardless of cargo size." },
-            { section: "Section 5: Air Brakes", q: "Air Brake Lag Stopping Distance at 55 MPH", a: "Adds approximately 32 feet to stopping distance." },
-            { section: "Section 1: Introduction", q: "Minimum Age for Interstate CMV Driving", a: "21 years old." },
-            { section: "Section 1: Introduction", q: "Minimum Passing Score on CDL Knowledge Tests", a: "80 percent." },
-            { section: "Section 9: Hazmat", q: "Placards Requirement for Table 1", a: "Any amount transported requires placarding immediately." }
-        ];
+        // Flashcards Data generated dynamically from every question in the question bank
+        let flashcardsData = [];
+
+        function generateFlashcardsFromQuestions() {
+            flashcardsData = questions.map(q => ({
+                section: q.sectionName,
+                q: q.question,
+                a: `Correct Answer: ${q.options[q.answer]}`,
+                ref: `${q.ref}: "${q.quote}"`
+            }));
+        }
 
         let currentTab = 'dashboard';
         let quizzesTaken = 0;
@@ -1209,17 +1310,71 @@
             } else if (tabId === 'all-questions') {
                 renderQuestionBank(questions);
             } else if (tabId === 'flashcards') {
-                renderFlashcard();
+                initFlashcards();
             }
         }
 
         // Initialize App on DOM Ready
         document.addEventListener("DOMContentLoaded", () => {
             document.getElementById('stat-total-q').innerText = questions.length;
-            renderFlashcard();
+            generateFlashcardsFromQuestions();
+            initFlashcards();
             filterModuleQuestions();
             renderQuestionBank(questions);
         });
+
+        // Flashcards Logic with Randomization on access/shuffle
+        function initFlashcards() {
+            // Shuffle the flashcards array randomly
+            flashcardsData.sort(() => Math.random() - 0.5);
+            currentCardIndex = 0;
+            renderFlashcard();
+        }
+
+        function renderFlashcard() {
+            if (flashcardsData.length === 0) return;
+            const card = flashcardsData[currentCardIndex];
+            const sectionEl = document.getElementById('fc-section');
+            const counterEl = document.getElementById('fc-counter');
+            const contentEl = document.getElementById('fc-content');
+            const refEl = document.getElementById('fc-ref');
+            if (!sectionEl || !contentEl) return;
+
+            sectionEl.innerText = card.section;
+            counterEl.innerText = `Card ${currentCardIndex + 1} of ${flashcardsData.length}`;
+            contentEl.innerText = card.q;
+            refEl.innerText = card.ref;
+            refEl.classList.add('hidden');
+            isCardFlipped = false;
+            document.getElementById('flashcard-inner').classList.remove('bg-blue-950/40', 'border-blue-500/40');
+        }
+
+        function flipFlashcard() {
+            const inner = document.getElementById('flashcard-inner');
+            const content = document.getElementById('fc-content');
+            const refEl = document.getElementById('fc-ref');
+            isCardFlipped = !isCardFlipped;
+
+            if (isCardFlipped) {
+                inner.classList.add('bg-blue-950/40', 'border-blue-500/40');
+                content.innerText = flashcardsData[currentCardIndex].a;
+                refEl.classList.remove('hidden');
+            } else {
+                inner.classList.remove('bg-blue-950/40', 'border-blue-500/40');
+                content.innerText = flashcardsData[currentCardIndex].q;
+                refEl.classList.add('hidden');
+            }
+        }
+
+        function nextFlashcard() {
+            currentCardIndex = (currentCardIndex + 1) % flashcardsData.length;
+            renderFlashcard();
+        }
+
+        function prevFlashcard() {
+            currentCardIndex = (currentCardIndex - 1 + flashcardsData.length) % flashcardsData.length;
+            renderFlashcard();
+        }
 
         // Modules Filter
         function filterModuleQuestions() {
@@ -1410,45 +1565,6 @@
             document.getElementById('quiz-setup').classList.remove('hidden');
         }
 
-        // Flashcards Logic
-        function renderFlashcard() {
-            const card = flashcardsData[currentCardIndex];
-            const sectionEl = document.getElementById('fc-section');
-            const counterEl = document.getElementById('fc-counter');
-            const contentEl = document.getElementById('fc-content');
-            if (!sectionEl || !contentEl) return;
-
-            sectionEl.innerText = card.section;
-            counterEl.innerText = `Card ${currentCardIndex + 1} of ${flashcardsData.length}`;
-            contentEl.innerText = card.q;
-            isCardFlipped = false;
-            document.getElementById('flashcard-inner').classList.remove('bg-blue-950/40', 'border-blue-500/40');
-        }
-
-        function flipFlashcard() {
-            const inner = document.getElementById('flashcard-inner');
-            const content = document.getElementById('fc-content');
-            isCardFlipped = !isCardFlipped;
-
-            if (isCardFlipped) {
-                inner.classList.add('bg-blue-950/40', 'border-blue-500/40');
-                content.innerText = flashcardsData[currentCardIndex].a;
-            } else {
-                inner.classList.remove('bg-blue-950/40', 'border-blue-500/40');
-                content.innerText = flashcardsData[currentCardIndex].q;
-            }
-        }
-
-        function nextFlashcard() {
-            currentCardIndex = (currentCardIndex + 1) % flashcardsData.length;
-            renderFlashcard();
-        }
-
-        function prevFlashcard() {
-            currentCardIndex = (currentCardIndex - 1 + flashcardsData.length) % flashcardsData.length;
-            renderFlashcard();
-        }
-
         // Question Bank Logic
         function renderQuestionBank(items) {
             const container = document.getElementById('question-bank-container');
@@ -1505,3 +1621,5 @@
     </style>
 </body>
 </html>
+
+```
