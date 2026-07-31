@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en" class="dark">
 <head>
@@ -55,7 +54,7 @@
             <div class="bg-gradient-to-r from-blue-900/40 via-slate-900 to-indigo-950/40 border border-blue-500/20 rounded-2xl p-6 sm:p-8 shadow-xl">
                 <h2 class="text-2xl sm:text-3xl font-extrabold text-white mb-3">Welcome to your CDL-A Study Hub!</h2>
                 <p class="text-slate-300 text-sm sm:text-base max-w-3xl leading-relaxed">
-                    Prepare thoroughly for your Michigan Commercial Driver's License written examinations. This app features an expanded question bank featuring extensive coverage of Section 6 (Combination Vehicles), complete with highlighted manual reference quotes, timed practice simulations, randomized flashcards, and essential quick-reference values.
+                    Prepare thoroughly for your Michigan Commercial Driver's License written examinations. This app features an expanded question bank featuring extensive coverage of Section 6 (Combination Vehicles), complete with highlighted manual reference quotes, timed practice simulations, randomized flashcards with section filtering, and essential quick-reference values.
                 </p>
                 <div class="mt-6 flex flex-wrap gap-4">
                     <button onclick="switchTab('quiz'); startTimedQuiz(25);" class="bg-blue-600 hover:bg-blue-500 text-white font-bold px-6 py-3 rounded-xl shadow-lg transition transform hover:-translate-y-0.5 flex items-center gap-2">
@@ -111,7 +110,7 @@
                     <div onclick="switchTab('flashcards')" class="bg-slate-900 hover:bg-slate-850 border border-slate-800 hover:border-slate-700 p-5 rounded-xl cursor-pointer transition shadow-md group">
                         <div class="text-emerald-400 text-2xl mb-2 group-hover:scale-110 transition-transform">🗂️</div>
                         <h4 class="font-bold text-white text-base">Randomized Flashcards</h4>
-                        <p class="text-xs text-slate-400 mt-1">Full deck of flashcards randomized every time for fast memorization.</p>
+                        <p class="text-xs text-slate-400 mt-1">Full deck of flashcards with individual section study filters.</p>
                     </div>
                     <div onclick="switchTab('quick-study')" class="bg-slate-900 hover:bg-slate-850 border border-slate-800 hover:border-slate-700 p-5 rounded-xl cursor-pointer transition shadow-md group">
                         <div class="text-amber-400 text-2xl mb-2 group-hover:scale-110 transition-transform">💡</div>
@@ -207,14 +206,28 @@
 
         <!-- FLASHCARDS TAB -->
         <section id="tab-flashcards" class="hidden space-y-6 max-w-xl mx-auto">
-            <div class="text-center flex justify-between items-center">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 bg-slate-900 p-5 rounded-2xl border border-slate-800 shadow-md">
                 <div>
-                    <h2 class="text-2xl font-bold text-white text-left">Randomized Flashcards</h2>
-                    <p class="text-xs text-slate-400 mt-1 text-left">All question bank items randomized for dynamic study.</p>
+                    <h2 class="text-xl font-bold text-white">Flashcards Deck</h2>
+                    <p class="text-xs text-slate-400 mt-0.5">Study all items or filter by a specific section.</p>
                 </div>
-                <button onclick="initFlashcards()" class="bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs text-blue-400 font-semibold px-3.5 py-2 rounded-xl transition flex items-center gap-1.5">
-                    <span>🔀</span> Shuffle Deck
-                </button>
+                <div class="flex items-center gap-2 w-full sm:w-auto">
+                    <select id="flashcard-section-select" onchange="initFlashcards()" class="bg-slate-950 border border-slate-700 text-white rounded-xl px-3 py-2 text-xs focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option value="all">All Sections (104 Cards)</option>
+                        <option value="Sec 1">Section 1: Introduction</option>
+                        <option value="Sec 2">Section 2: Driving Safely</option>
+                        <option value="Sec 3">Section 3: Transporting Cargo</option>
+                        <option value="Sec 4">Section 4: Passengers</option>
+                        <option value="Sec 5">Section 5: Air Brakes</option>
+                        <option value="Sec 6">Section 6: Combination Vehicles</option>
+                        <option value="Sec 7">Section 7: Doubles & Triples</option>
+                        <option value="Sec 8">Section 8: Tank Vehicles</option>
+                        <option value="Sec 9">Section 9: Hazardous Materials</option>
+                    </select>
+                    <button onclick="initFlashcards()" class="bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs text-blue-400 font-semibold px-3 py-2 rounded-xl transition flex items-center gap-1 shrink-0">
+                        <span>🔀</span> Shuffle
+                    </button>
+                </div>
             </div>
 
             <div class="perspective-1000 w-full h-80 cursor-pointer" onclick="flipFlashcard()">
@@ -1347,13 +1360,21 @@
         // Flashcards Data generated dynamically from every question in the question bank
         let flashcardsData = [];
 
-        function generateFlashcardsFromQuestions() {
-            flashcardsData = questions.map(q => ({
+        function initFlashcards() {
+            const selectedSec = document.getElementById('flashcard-section-select').value;
+            let filtered = selectedSec === 'all' ? questions : questions.filter(q => q.section === selectedSec);
+
+            flashcardsData = filtered.map(q => ({
                 section: q.sectionName,
                 q: q.question,
                 a: `Correct Answer: ${q.options[q.answer]}`,
                 ref: `${q.ref}: "${q.quote}"`
             }));
+
+            // Shuffle the flashcards array randomly
+            flashcardsData.sort(() => Math.random() - 0.5);
+            currentCardIndex = 0;
+            renderFlashcard();
         }
 
         let currentTab = 'dashboard';
@@ -1397,22 +1418,19 @@
         // Initialize App on DOM Ready
         document.addEventListener("DOMContentLoaded", () => {
             document.getElementById('stat-total-q').innerText = questions.length;
-            generateFlashcardsFromQuestions();
             initFlashcards();
             filterModuleQuestions();
             renderQuestionBank(questions);
         });
 
-        // Flashcards Logic with Randomization on access/shuffle
-        function initFlashcards() {
-            // Shuffle the flashcards array randomly
-            flashcardsData.sort(() => Math.random() - 0.5);
-            currentCardIndex = 0;
-            renderFlashcard();
-        }
-
         function renderFlashcard() {
-            if (flashcardsData.length === 0) return;
+            if (flashcardsData.length === 0) {
+                document.getElementById('fc-section').innerText = "None";
+                document.getElementById('fc-counter').innerText = "Card 0 of 0";
+                document.getElementById('fc-content').innerText = "No flashcards found for this section.";
+                document.getElementById('fc-ref').classList.add('hidden');
+                return;
+            }
             const card = flashcardsData[currentCardIndex];
             const sectionEl = document.getElementById('fc-section');
             const counterEl = document.getElementById('fc-counter');
@@ -1430,6 +1448,7 @@
         }
 
         function flipFlashcard() {
+            if (flashcardsData.length === 0) return;
             const inner = document.getElementById('flashcard-inner');
             const content = document.getElementById('fc-content');
             const refEl = document.getElementById('fc-ref');
@@ -1447,11 +1466,13 @@
         }
 
         function nextFlashcard() {
+            if (flashcardsData.length === 0) return;
             currentCardIndex = (currentCardIndex + 1) % flashcardsData.length;
             renderFlashcard();
         }
 
         function prevFlashcard() {
+            if (flashcardsData.length === 0) return;
             currentCardIndex = (currentCardIndex - 1 + flashcardsData.length) % flashcardsData.length;
             renderFlashcard();
         }
