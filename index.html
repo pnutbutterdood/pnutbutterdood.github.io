@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en" class="dark">
 <head>
@@ -55,7 +54,7 @@
             <div class="bg-gradient-to-r from-blue-900/40 via-slate-900 to-indigo-950/40 border border-blue-500/20 rounded-2xl p-6 sm:p-8 shadow-xl">
                 <h2 class="text-2xl sm:text-3xl font-extrabold text-white mb-3">Welcome to your CDL-A Study Hub!</h2>
                 <p class="text-slate-300 text-sm sm:text-base max-w-3xl leading-relaxed">
-                    Prepare thoroughly for your Michigan Commercial Driver's License written examinations. This app features over 90 detailed multiple-choice questions curated directly from the Michigan CDL Manual, complete with highlighted manual reference quotes, timed practice simulations, randomized flashcards for every question, and essential quick-reference values.
+                    Prepare thoroughly for your Michigan Commercial Driver's License written examinations. This app features an expanded question bank featuring extensive coverage of Section 6 (Combination Vehicles), complete with highlighted manual reference quotes, timed practice simulations, randomized flashcards, and essential quick-reference values.
                 </p>
                 <div class="mt-6 flex flex-wrap gap-4">
                     <button onclick="switchTab('quiz'); startTimedQuiz(25);" class="bg-blue-600 hover:bg-blue-500 text-white font-bold px-6 py-3 rounded-xl shadow-lg transition transform hover:-translate-y-0.5 flex items-center gap-2">
@@ -72,23 +71,23 @@
                 <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 shadow-md flex items-center justify-between">
                     <div>
                         <p class="text-xs uppercase tracking-wider text-slate-400 font-medium">Total Questions</p>
-                        <h3 class="text-3xl font-extrabold text-white mt-1" id="stat-total-q">92</h3>
+                        <h3 class="text-3xl font-extrabold text-white mt-1" id="stat-total-q">104</h3>
                     </div>
                     <div class="p-3 bg-blue-500/10 text-blue-400 rounded-xl text-2xl border border-blue-500/20">📚</div>
                 </div>
                 <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 shadow-md flex items-center justify-between">
                     <div>
                         <p class="text-xs uppercase tracking-wider text-slate-400 font-medium">Flashcards Available</p>
-                        <h3 class="text-3xl font-extrabold text-white mt-1">92</h3>
+                        <h3 class="text-3xl font-extrabold text-white mt-1">104</h3>
                     </div>
                     <div class="p-3 bg-emerald-500/10 text-emerald-400 rounded-xl text-2xl border border-emerald-500/20">🗂️</div>
                 </div>
                 <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 shadow-md flex items-center justify-between">
                     <div>
-                        <p class="text-xs uppercase tracking-wider text-slate-400 font-medium">Air Brakes Focus</p>
-                        <h3 class="text-3xl font-extrabold text-white mt-1">Section 5 & 6</h3>
+                        <p class="text-xs uppercase tracking-wider text-slate-400 font-medium">Section 6 Focus</p>
+                        <h3 class="text-3xl font-extrabold text-white mt-1">Combination</h3>
                     </div>
-                    <div class="p-3 bg-amber-500/10 text-amber-400 rounded-xl text-2xl border border-amber-500/20">🛑</div>
+                    <div class="p-3 bg-amber-500/10 text-amber-400 rounded-xl text-2xl border border-amber-500/20">🚛</div>
                 </div>
                 <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 shadow-md flex items-center justify-between">
                     <div>
@@ -111,7 +110,7 @@
                     <div onclick="switchTab('flashcards')" class="bg-slate-900 hover:bg-slate-850 border border-slate-800 hover:border-slate-700 p-5 rounded-xl cursor-pointer transition shadow-md group">
                         <div class="text-emerald-400 text-2xl mb-2 group-hover:scale-110 transition-transform">🗂️</div>
                         <h4 class="font-bold text-white text-base">Randomized Flashcards</h4>
-                        <p class="text-xs text-slate-400 mt-1">Full deck of 92 flashcards randomized every time for fast memorization.</p>
+                        <p class="text-xs text-slate-400 mt-1">Full deck of flashcards randomized every time for fast memorization.</p>
                     </div>
                     <div onclick="switchTab('quick-study')" class="bg-slate-900 hover:bg-slate-850 border border-slate-800 hover:border-slate-700 p-5 rounded-xl cursor-pointer transition shadow-md group">
                         <div class="text-amber-400 text-2xl mb-2 group-hover:scale-110 transition-transform">💡</div>
@@ -210,7 +209,7 @@
             <div class="text-center flex justify-between items-center">
                 <div>
                     <h2 class="text-2xl font-bold text-white text-left">Randomized Flashcards</h2>
-                    <p class="text-xs text-slate-400 mt-1 text-left">All 92 question bank items randomized for dynamic study.</p>
+                    <p class="text-xs text-slate-400 mt-1 text-left">All question bank items randomized for dynamic study.</p>
                 </div>
                 <button onclick="initFlashcards()" class="bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs text-blue-400 font-semibold px-3.5 py-2 rounded-xl transition flex items-center gap-1.5">
                     <span>🔀</span> Shuffle Deck
@@ -221,7 +220,7 @@
                 <div id="flashcard-inner" class="relative w-full h-full duration-500 transform-style-3d bg-slate-900 border border-slate-800 rounded-2xl shadow-xl p-8 flex flex-col justify-between items-center text-center select-none hover:border-slate-700 transition">
                     <div class="w-full flex justify-between items-center text-xs text-slate-400">
                         <span id="fc-section" class="bg-blue-500/10 text-blue-400 px-2.5 py-1 rounded-full border border-blue-500/20 font-medium">Section 5</span>
-                        <span id="fc-counter">Card 1 of 92</span>
+                        <span id="fc-counter">Card 1 of 104</span>
                     </div>
                     <div class="my-auto space-y-2">
                         <h3 id="fc-content" class="text-lg sm:text-xl font-bold text-white leading-relaxed">What is the minimum legal tread depth for front steering axle tires?</h3>
@@ -242,7 +241,7 @@
             <div class="bg-slate-900 p-6 rounded-2xl border border-slate-800 shadow-md flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
                 <div>
                     <h2 class="text-xl font-bold text-white">Complete Question Bank</h2>
-                    <p class="text-xs text-slate-400 mt-1">Browse all 92 available CDL-A and Air Brakes questions with manual quote highlights.</p>
+                    <p class="text-xs text-slate-400 mt-1">Browse all available CDL-A questions with manual quote highlights.</p>
                 </div>
                 <div class="w-full sm:w-72">
                     <input type="text" id="question-search" oninput="filterQuestionBank()" placeholder="Search keywords..." class="bg-slate-950 border border-slate-700 text-white rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 w-full">
@@ -321,7 +320,7 @@
 
     <!-- Application Script -->
     <script>
-        // Comprehensive Question Bank (92 Questions spanning Sections 1-9 with manual quotes)
+        // Comprehensive Question Bank (104 Questions including expanded Section 6 Combination Vehicles)
         const questions = [
             // Section 1
             {
@@ -793,7 +792,7 @@
                 quote: "Before driving a vehicle with a dual air system, allow time for the air compressor to build up a minimum of 100 psi pressure in both the primary and secondary systems."
             },
 
-            // Section 6 (Combination Vehicles)
+            // Section 6 (Combination Vehicles) - Expanded Set
             {
                 id: 47,
                 section: "Sec 6",
@@ -873,6 +872,126 @@
                 answer: 2,
                 ref: "Section 6, Page 92",
                 quote: "Locking jaws around the shank, not the head of kingpin."
+            },
+            {
+                id: 93,
+                section: "Sec 6",
+                sectionName: "Section 6: Combination Vehicles",
+                question: "What is the trailer hand valve (trolley valve) used for in combination vehicles?",
+                options: ["Normal highway braking", "Testing the trailer brakes only", "Parking on steep inclines", "Emergency decoupling"],
+                answer: 1,
+                ref: "Section 6, Page 84",
+                quote: "The trailer hand valve... should be used only to test the trailer brakes. Do not use it in driving because of the danger of making the trailer skid."
+            },
+            {
+                id: 94,
+                section: "Sec 6",
+                sectionName: "Section 6: Combination Vehicles",
+                question: "What does the tractor protection valve do if the trailer breaks away or develops a major leak?",
+                options: ["Automatically releases the tractor spring brakes", "Keeps air in the tractor brake system and seals the trailer emergency line", "Drains the auxiliary air storage tanks", "Triggers the hazard lights"],
+                answer: 1,
+                ref: "Section 6, Page 84",
+                quote: "The tractor protection valve keeps air in the tractor or truck brake system should the trailer break away or develop a bad leak."
+            },
+            {
+                id: 95,
+                section: "Sec 6",
+                sectionName: "Section 6: Combination Vehicles",
+                question: "What happens when the trailer air supply control (red knob) is pulled out?",
+                options: ["Trailer service brakes apply fully", "Air is supplied to charge trailer tanks", "Air is shut off and trailer emergency/parking brakes are applied", "Fifth wheel locking jaws open automatically"],
+                answer: 2,
+                ref: "Section 6, Page 84",
+                quote: "You push it in to supply the trailer with air and pull it out to shut the air off and put on the trailer emergency brakes."
+            },
+            {
+                id: 96,
+                section: "Sec 6",
+                sectionName: "Section 6: Combination Vehicles",
+                question: "What are glad hands used for?",
+                options: ["Securing cargo tie-downs", "Coupling the service and emergency air lines from tractor to trailer", "Locking the fifth wheel skid plate", "Connecting tractor battery terminals"],
+                answer: 1,
+                ref: "Section 6, Page 85",
+                quote: "Glad hands are coupling devices used to connect the service and emergency air lines from the truck or tractor to the trailer."
+            },
+            {
+                id: 97,
+                section: "Sec 6",
+                sectionName: "Section 6: Combination Vehicles",
+                question: "How do empty combination vehicles compare to fully loaded combination vehicles regarding stopping distance?",
+                options: ["Empty rigs stop in half the distance", "Empty rigs require greater stopping distances because of less traction and wheel lockup risk", "Stopping distance is identical", "Empty rigs only require stopping distance equal to a car"],
+                answer: 1,
+                ref: "Section 6, Page 81",
+                quote: "Large combination vehicles take longer to stop when they are empty than when they are fully loaded. When lightly loaded, the very stiff suspension springs and strong brakes give poor traction..."
+            },
+            {
+                id: 98,
+                section: "Sec 6",
+                sectionName: "Section 6: Combination Vehicles",
+                question: "What is a 'trailer jackknife' caused by?",
+                options: ["Tractor front wheel lockup", "Trailer wheels locking up and sliding sideways", "Steering too sharply to the left at high speeds", "Air compressor governor failure"],
+                answer: 1,
+                ref: "Section 6, Page 82",
+                quote: "When the wheels of a trailer lock up, the trailer will tend to swing around. This is more likely to happen when the trailer is empty or lightly loaded. This type of jackknife is often called a 'trailer jackknife.'"
+            },
+            {
+                id: 99,
+                section: "Sec 6",
+                sectionName: "Section 6: Combination Vehicles",
+                question: "When coupling a tractor-semitrailer, why should you never back under the trailer at an angle?",
+                options: ["It drains the tractor battery", "You might push the trailer sideways and break the landing gear", "It locks the fifth wheel jaws prematurely", "It crosses the service and emergency air lines"],
+                answer: 1,
+                ref: "Section 6, Page 87",
+                quote: "Never back under the trailer at an angle because you might push the trailer sideways and break the landing gear."
+            },
+            {
+                id: 100,
+                section: "Sec 6",
+                sectionName: "Section 6: Combination Vehicles",
+                question: "How should you test that the trailer is securely locked onto the tractor fifth wheel during coupling?",
+                options: ["Drive forward at 30 mph on the highway", "Raise trailer landing gear slightly and pull tractor gently forward with trailer brakes locked", "Inspect the kingpin head visually from the cab", "Apply the trailer hand valve while in neutral"],
+                answer: 1,
+                ref: "Section 6, Page 88",
+                quote: "Raise trailer landing gear slightly off ground. Pull tractor gently forward while the trailer brakes are still locked to check that the trailer is locked onto the tractor."
+            },
+            {
+                id: 101,
+                section: "Sec 6",
+                sectionName: "Section 6: Combination Vehicles",
+                question: "What should you do if your trailer begins to skid (trailer jackknife)?",
+                options: ["Apply the trailer hand valve immediately", "Release the brakes to regain traction", "Steer sharply into oncoming traffic", "Pull the emergency air supply knob out"],
+                answer: 1,
+                ref: "Section 6, Page 82",
+                quote: "Stop Using the Brake. Release the brakes to get traction back. Do not use the trailer hand brake (if you have one) to 'straighten out the rig.'"
+            },
+            {
+                id: 102,
+                section: "Sec 6",
+                sectionName: "Section 6: Combination Vehicles",
+                question: "What is 'off-tracking' (or 'cheating') when driving a combination vehicle?",
+                options: ["The trailer tires following a different, tighter path than the front wheels in a turn", "Tires losing tread in curves", "The tractor sliding sideways on ice", "GPS navigation tracking error"],
+                answer: 0,
+                ref: "Section 6, Page 82",
+                quote: "When a vehicle goes around a corner, the rear wheels follow a different path than the front wheels. This is called off-tracking or 'cheating.'"
+            },
+            {
+                id: 103,
+                section: "Sec 6",
+                sectionName: "Section 6: Combination Vehicles",
+                question: "When uncoupling a tractor-semitrailer, why should you lower the landing gear until it makes firm contact with the ground (and a few extra turns if loaded)?",
+                options: ["To test the landing gear hydraulics", "To support the trailer weight and prevent it from dropping when uncoupled", "To engage the parking brakes automatically", "To lift the tractor off its rear tires"],
+                answer: 1,
+                ref: "Section 6, Page 88 & 89",
+                quote: "Make sure ground is supporting trailer... If trailer is loaded, after the landing gear makes firm contact with the ground, turn crank in low gear a few extra turns. This will lift some weight off the tractor."
+            },
+            {
+                id: 104,
+                section: "Sec 6",
+                sectionName: "Section 6: Combination Vehicles",
+                question: "What is the purpose of dummy couplers (dead-end couplers) on a tractor?",
+                options: ["To store air hoses and prevent dirt and moisture from entering glad hands when not in use", "To act as emergency backup air tanks", "To lock the fifth wheel when bobtailing", "To release spring brakes during towing"],
+                answer: 0,
+                ref: "Section 6, Page 85",
+                quote: "Some vehicles have 'dead end' or dummy couplers to which the hoses may be attached when they are not in use. This will prevent water and dirt from getting into the coupler and the air lines."
             },
 
             // Section 7
@@ -1063,26 +1182,6 @@
                 quote: "ABS helps you avoid wheel lock up and maintain control. You may or may not be able to stop faster with ABS, but you should be able to steer around an obstacle while braking..."
             },
             {
-                id: 73,
-                section: "Sec 6",
-                sectionName: "Section 6: Combination Vehicles",
-                question: "What is the trailer hand valve (trolley valve) used for?",
-                options: ["Normal driving stops", "Testing the trailer brakes only", "Parking on hills", "Emergency trailer breakaway"],
-                answer: 1,
-                ref: "Section 6, Page 84",
-                quote: "The trailer hand valve... should be used only to test the trailer brakes. Do not use it in driving because of the danger of making the trailer skid."
-            },
-            {
-                id: 74,
-                section: "Sec 6",
-                sectionName: "Section 6: Combination Vehicles",
-                question: "What does the tractor protection valve do?",
-                options: ["Controls trailer air suspension", "Keeps air in the tractor brake system if the trailer breaks away or develops a bad leak", "Regulates governor cutout", "Releases spring brakes"],
-                answer: 1,
-                ref: "Section 6, Page 84",
-                quote: "The tractor protection valve keeps air in the tractor or truck brake system should the trailer break away or develop a bad leak."
-            },
-            {
                 id: 75,
                 section: "Sec 2",
                 sectionName: "Section 2: Driving Safely",
@@ -1161,26 +1260,6 @@
                 answer: 1,
                 ref: "Section 9, Page 102",
                 quote: "Drivers to keep hazardous materials shipping papers: In a pouch on the driver's door, or In clear view within immediate reach while the seat belt is fastened while driving..."
-            },
-            {
-                id: 83,
-                section: "Sec 10",
-                sectionName: "Section 10: School Buses",
-                question: "What is the 'danger zone' around a school bus?",
-                options: ["Only inside the bus", "The area up to 30 feet in front, 10 feet on sides, and 10 feet behind the bus", "Only behind the rear wheels", "Within 5 feet of doors"],
-                answer: 1,
-                ref: "Section 10, Page 121",
-                quote: "The danger zone is the area on all sides of the bus where children are in the most danger... may extend as much as 30 feet from the front bumper... 10 feet from the left and right sides... and 10 feet behind the rear bumper."
-            },
-            {
-                id: 84,
-                section: "Sec 10",
-                sectionName: "Section 10: School Buses",
-                question: "How far away from students should a school bus stop when loading or unloading?",
-                options: ["At least 2 feet", "At least 5 feet", "At least 10 feet away from students", "Right next to students"],
-                answer: 2,
-                ref: "Section 10, Page 123",
-                quote: "Bring school bus to a full stop with the front bumper at least 10 feet away from students at the designated stop. This forces the students to walk to the bus so you have a better view of their movements."
             },
             {
                 id: 85,
@@ -1621,5 +1700,3 @@
     </style>
 </body>
 </html>
-
-```
