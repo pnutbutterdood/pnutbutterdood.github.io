@@ -54,7 +54,7 @@
             <div class="bg-gradient-to-r from-blue-900/40 via-slate-900 to-indigo-950/40 border border-blue-500/20 rounded-2xl p-6 sm:p-8 shadow-xl">
                 <h2 class="text-2xl sm:text-3xl font-extrabold text-white mb-3">Welcome to your CDL-A Study Hub!</h2>
                 <p class="text-slate-300 text-sm sm:text-base max-w-3xl leading-relaxed">
-                    Prepare thoroughly for your Michigan Commercial Driver's License written examinations. This app features an expanded question bank featuring extensive coverage of Section 6 (Combination Vehicles), complete with highlighted manual reference quotes, timed practice simulations, randomized flashcards with section filtering, and essential quick-reference values.
+                    Prepare thoroughly for your Michigan Commercial Driver's License written examinations. This app features an expanded question bank featuring extensive coverage of Section 2.1 (Vehicle Inspection), Section 2.2 (Basic Control), Section 2.3 (Shifting Gears), Section 2.4 (Seeing), Section 2.5 (Communicating), Section 2.6 (Controlling Speed), Section 2.7 (Managing Space), Section 2.8 (Seeing Hazards), Section 2.9 (Distracted Driving), Section 2.10 (Aggressive Driving / Road Rage), and Section 6 (Combination Vehicles).
                 </p>
                 <div class="mt-6 flex flex-wrap gap-4">
                     <button onclick="switchTab('quiz'); startTimedQuiz(25);" class="bg-blue-600 hover:bg-blue-500 text-white font-bold px-6 py-3 rounded-xl shadow-lg transition transform hover:-translate-y-0.5 flex items-center gap-2">
@@ -71,23 +71,23 @@
                 <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 shadow-md flex items-center justify-between">
                     <div>
                         <p class="text-xs uppercase tracking-wider text-slate-400 font-medium">Total Questions</p>
-                        <h3 class="text-3xl font-extrabold text-white mt-1" id="stat-total-q">104</h3>
+                        <h3 class="text-3xl font-extrabold text-white mt-1" id="stat-total-q">194</h3>
                     </div>
                     <div class="p-3 bg-blue-500/10 text-blue-400 rounded-xl text-2xl border border-blue-500/20">📚</div>
                 </div>
                 <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 shadow-md flex items-center justify-between">
                     <div>
                         <p class="text-xs uppercase tracking-wider text-slate-400 font-medium">Flashcards Available</p>
-                        <h3 class="text-3xl font-extrabold text-white mt-1">104</h3>
+                        <h3 class="text-3xl font-extrabold text-white mt-1">194</h3>
                     </div>
                     <div class="p-3 bg-emerald-500/10 text-emerald-400 rounded-xl text-2xl border border-emerald-500/20">🗂️</div>
                 </div>
                 <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 shadow-md flex items-center justify-between">
                     <div>
-                        <p class="text-xs uppercase tracking-wider text-slate-400 font-medium">Section 6 Focus</p>
-                        <h3 class="text-3xl font-extrabold text-white mt-1">Combination</h3>
+                        <p class="text-xs uppercase tracking-wider text-slate-400 font-medium">Section 2.10 Focus</p>
+                        <h3 class="text-3xl font-extrabold text-white mt-1">Aggressive Driving</h3>
                     </div>
-                    <div class="p-3 bg-amber-500/10 text-amber-400 rounded-xl text-2xl border border-amber-500/20">🚛</div>
+                    <div class="p-3 bg-amber-500/10 text-amber-400 rounded-xl text-2xl border border-amber-500/20">😠</div>
                 </div>
                 <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 shadow-md flex items-center justify-between">
                     <div>
@@ -105,7 +105,7 @@
                     <div onclick="switchTab('modules')" class="bg-slate-900 hover:bg-slate-850 border border-slate-800 hover:border-slate-700 p-5 rounded-xl cursor-pointer transition shadow-md group">
                         <div class="text-blue-400 text-2xl mb-2 group-hover:scale-110 transition-transform">📖</div>
                         <h4 class="font-bold text-white text-base">Study Modules (1-9)</h4>
-                        <p class="text-xs text-slate-400 mt-1">Review specific sections including Air Brakes, Combination Vehicles, and Hazmat.</p>
+                        <p class="text-xs text-slate-400 mt-1">Review specific sections including Aggressive Driving, Air Brakes, and Combination Vehicles.</p>
                     </div>
                     <div onclick="switchTab('flashcards')" class="bg-slate-900 hover:bg-slate-850 border border-slate-800 hover:border-slate-700 p-5 rounded-xl cursor-pointer transition shadow-md group">
                         <div class="text-emerald-400 text-2xl mb-2 group-hover:scale-110 transition-transform">🗂️</div>
@@ -133,6 +133,16 @@
                         <option value="all">All Sections Combined</option>
                         <option value="Sec 1">Section 1: Introduction to CDL</option>
                         <option value="Sec 2">Section 2: Driving Safely</option>
+                        <option value="Sec 2.1">Section 2.1: Vehicle Inspection</option>
+                        <option value="Sec 2.2">Section 2.2: Basic Control of Your Vehicle</option>
+                        <option value="Sec 2.3">Section 2.3: Shifting Gears</option>
+                        <option value="Sec 2.4">Section 2.4: Seeing</option>
+                        <option value="Sec 2.5">Section 2.5: Communicating</option>
+                        <option value="Sec 2.6">Section 2.6: Controlling Speed</option>
+                        <option value="Sec 2.7">Section 2.7: Managing Space</option>
+                        <option value="Sec 2.8">Section 2.8: Seeing Hazards</option>
+                        <option value="Sec 2.9">Section 2.9: Distracted Driving</option>
+                        <option value="Sec 2.10">Section 2.10: Aggressive Driving / Road Rage</option>
                         <option value="Sec 3">Section 3: Transporting Cargo Safely</option>
                         <option value="Sec 4">Section 4: Transporting Passengers Safely</option>
                         <option value="Sec 5">Section 5: Air Brakes</option>
@@ -173,7 +183,7 @@
                 </div>
 
                 <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8 shadow-xl space-y-6">
-                    <div id="quiz-question-badge" class="inline-block px-3 py-1 bg-blue-500/10 text-blue-400 text-xs font-semibold rounded-full border border-blue-500/20">Section 5: Air Brakes</div>
+                    <div id="quiz-question-badge" class="inline-block px-3 py-1 bg-blue-500/10 text-blue-400 text-xs font-semibold rounded-full border border-blue-500/20">Section 2.10: Aggressive Driving</div>
                     <h3 id="quiz-question-text" class="text-lg sm:text-xl font-bold text-white leading-snug">Question text goes here?</h3>
                     
                     <div id="quiz-options" class="space-y-3">
@@ -213,9 +223,19 @@
                 </div>
                 <div class="flex items-center gap-2 w-full sm:w-auto">
                     <select id="flashcard-section-select" onchange="initFlashcards()" class="bg-slate-950 border border-slate-700 text-white rounded-xl px-3 py-2 text-xs focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        <option value="all">All Sections (104 Cards)</option>
+                        <option value="all">All Sections (194 Cards)</option>
                         <option value="Sec 1">Section 1: Introduction</option>
                         <option value="Sec 2">Section 2: Driving Safely</option>
+                        <option value="Sec 2.1">Section 2.1: Vehicle Inspection</option>
+                        <option value="Sec 2.2">Section 2.2: Basic Control of Your Vehicle</option>
+                        <option value="Sec 2.3">Section 2.3: Shifting Gears</option>
+                        <option value="Sec 2.4">Section 2.4: Seeing</option>
+                        <option value="Sec 2.5">Section 2.5: Communicating</option>
+                        <option value="Sec 2.6">Section 2.6: Controlling Speed</option>
+                        <option value="Sec 2.7">Section 2.7: Managing Space</option>
+                        <option value="Sec 2.8">Section 2.8: Seeing Hazards</option>
+                        <option value="Sec 2.9">Section 2.9: Distracted Driving</option>
+                        <option value="Sec 2.10">Section 2.10: Aggressive Driving / Road Rage</option>
                         <option value="Sec 3">Section 3: Transporting Cargo</option>
                         <option value="Sec 4">Section 4: Passengers</option>
                         <option value="Sec 5">Section 5: Air Brakes</option>
@@ -233,11 +253,11 @@
             <div class="perspective-1000 w-full h-80 cursor-pointer" onclick="flipFlashcard()">
                 <div id="flashcard-inner" class="relative w-full h-full duration-500 transform-style-3d bg-slate-900 border border-slate-800 rounded-2xl shadow-xl p-8 flex flex-col justify-between items-center text-center select-none hover:border-slate-700 transition">
                     <div class="w-full flex justify-between items-center text-xs text-slate-400">
-                        <span id="fc-section" class="bg-blue-500/10 text-blue-400 px-2.5 py-1 rounded-full border border-blue-500/20 font-medium">Section 5</span>
-                        <span id="fc-counter">Card 1 of 104</span>
+                        <span id="fc-section" class="bg-blue-500/10 text-blue-400 px-2.5 py-1 rounded-full border border-blue-500/20 font-medium">Section 2.10</span>
+                        <span id="fc-counter">Card 1 of 194</span>
                     </div>
                     <div class="my-auto space-y-2">
-                        <h3 id="fc-content" class="text-lg sm:text-xl font-bold text-white leading-relaxed">What is the minimum legal tread depth for front steering axle tires?</h3>
+                        <h3 id="fc-content" class="text-lg sm:text-xl font-bold text-white leading-relaxed">What is the official definition of aggressive driving?</h3>
                         <p id="fc-ref" class="text-xs text-blue-400 italic hidden"></p>
                     </div>
                     <div class="text-xs text-blue-400 font-semibold tracking-wide uppercase">Click to flip card 🔄</div>
@@ -334,7 +354,7 @@
 
     <!-- Application Script -->
     <script>
-        // Comprehensive Question Bank (104 Questions including expanded Section 6 Combination Vehicles)
+        // Comprehensive Question Bank (194 Questions including expanded Section 2.10 Aggressive Driving & previous sections)
         const questions = [
             // Section 1
             {
@@ -568,6 +588,926 @@
                 answer: 1,
                 ref: "Section 2, Page 57",
                 quote: "The power unit of placarded vehicles must have a fire extinguisher with a UL rating of 10 B:C or more."
+            },
+
+            // Section 2.1 - Vehicle Inspection
+            {
+                id: 105,
+                section: "Sec 2.1",
+                sectionName: "Section 2.1: Vehicle Inspection",
+                question: "How much steering wheel play is considered excessive and can make a vehicle hard to steer?",
+                options: ["More than 2 degrees (~0.5 inches)", "More than 5 degrees (~1 inch)", "More than 10 degrees (~2 inches movement at rim of 20-inch wheel)", "More than 25 degrees"],
+                answer: 2,
+                ref: "Section 2, Page 20",
+                quote: "Steering wheel play of more than 10 degrees (approximately 2 inches movement at the rim of a 20-inch steering wheel) can make it hard to steer."
+            },
+            {
+                id: 106,
+                section: "Sec 2.1",
+                sectionName: "Section 2.1: Vehicle Inspection",
+                question: "If one-fourth or more of the leaves in a leaf spring are missing or broken, what status is the vehicle placed in?",
+                options: ["Out of service", "Warning ticket only", "Allowed to finish trip", "No restriction"],
+                answer: 0,
+                ref: "Section 2, Page 20",
+                quote: "Missing or broken leaves in any leaf spring. If one-fourth or more are missing, it will put the vehicle 'out of service', but any defect could be dangerous."
+            },
+            {
+                id: 107,
+                section: "Sec 2.1",
+                sectionName: "Section 2.1: Vehicle Inspection",
+                question: "When performing the vehicle inspection engine compartment checks, how much 'give' should drive belts (alternator, water pump, air compressor) have?",
+                options: ["1/8 to 1/4 inch play", "1/2 to 3/4 inch play at the center of the belt", "1 to 2 inches play", "Zero play (completely tight)"],
+                answer: 1,
+                ref: "Section 2, Page 22 / Section 11, Page 131",
+                quote: "Check belts for tightness and excessive wear (alternator, water pump, air compressor). Learn how much 'give' the belts should have when adjusted right (1/2 to 3/4 inch play at center)..."
+            },
+            {
+                id: 108,
+                section: "Sec 2.1",
+                sectionName: "Section 2.1: Vehicle Inspection",
+                question: "After starting the engine, within how many seconds should the oil pressure gauge come up to normal operating range?",
+                options: ["Within 2 seconds", "Within seconds after engine is started", "Within 30 seconds", "Within 2 minutes"],
+                answer: 1,
+                ref: "Section 2, Page 22",
+                quote: "Oil pressure. Should come up to normal within seconds after engine is started."
+            },
+            {
+                id: 109,
+                section: "Sec 2.1",
+                sectionName: "Section 2.1: Vehicle Inspection",
+                question: "During air pressure buildup check in the cab, how fast should air pressure build from 50 to 90 psi?",
+                options: ["Within 1 minute", "Within 3 minutes", "Within 5 minutes", "Within 10 minutes"],
+                answer: 1,
+                ref: "Section 2, Page 22",
+                quote: "Air pressure. Pressure should build from 50 to 90 psi within 3 minutes. Build air pressure to governor cut-out (usually around 120 – 140 psi)."
+            },
+            {
+                id: 110,
+                section: "Sec 2.1",
+                sectionName: "Section 2.1: Vehicle Inspection",
+                question: "When checking cargo securement on a trip, how often must flatbed drivers inspect cargo and tie-downs after the first 50 miles?",
+                options: ["Every 50 miles", "Every 3 hours or 150 miles, and after every break", "Every 5 hours", "Only at the end of the day"],
+                answer: 1,
+                ref: "Section 2, Page 25 / Section 3, Page 63",
+                quote: "You need to inspect again: After you have driven for 3 hours or 150 miles. After every break you take during driving."
+            },
+            {
+                id: 111,
+                section: "Sec 2.1",
+                sectionName: "Section 2.1: Vehicle Inspection",
+                question: "What does rust streaks around wheel lug nuts indicate during a walk-around inspection?",
+                options: ["Normal weathering", "Loose lug nuts that require tightening with a wrench", "Over-inflated tires", "Wheel bearing failure"],
+                answer: 1,
+                ref: "Section 2, Page 23",
+                quote: "Use wrench to test rust-streaked lug nuts, indicating looseness."
+            },
+            {
+                id: 112,
+                section: "Sec 2.1",
+                sectionName: "Section 2.1: Vehicle Inspection",
+                question: "What is the maximum allowable air pressure loss rate for a combination vehicle with the engine off and foot brake fully applied during the air brake check?",
+                options: ["1 psi per minute", "2 psi in one minute", "4 pounds in one minute", "10 psi in one minute"],
+                answer: 2,
+                ref: "Section 5, Page 76 / Section 11, Page 132",
+                quote: "Check the air gauge to see if the air pressure drops more than three pounds in one minute (single vehicle) or four pounds in one minute (combination vehicle)."
+            },
+            {
+                id: 113,
+                section: "Sec 2.1",
+                sectionName: "Section 2.1: Vehicle Inspection",
+                question: "When checking manual slack adjusters on S-cam brakes during a walk-around inspection, what is the maximum pushrod movement allowed when pulled by hand with brakes released?",
+                options: ["1/4 inch", "1/2 inch", "More than about one inch", "2 inches"],
+                answer: 2,
+                ref: "Section 5, Page 75-76 / Section 11, Page 133",
+                quote: "If a slack adjuster moves more than about one inch where the push rod attaches to it, it probably needs adjustment."
+            },
+            {
+                id: 114,
+                section: "Sec 2.1",
+                sectionName: "Section 2.1: Vehicle Inspection",
+                question: "How should tire inflation pressure be checked properly during a vehicle inspection?",
+                options: ["By kicking the tires with your foot", "Using a tire pressure gauge", "Hitting tires with a heavy mallet", "Visual check only"],
+                answer: 1,
+                ref: "Section 11, Page 134",
+                quote: "Check for proper inflation by using a tire gauge. Note: You will not get credit if you simply kick the tires or use a mallet to check for proper inflation."
+            },
+            {
+                id: 115,
+                section: "Sec 2.1",
+                sectionName: "Section 2.1: Vehicle Inspection",
+                question: "Are re-grooved, recapped, or retreaded tires allowed on the front steering axle of a bus?",
+                options: ["Yes, always", "No, they are strictly prohibited", "Only during summer months", "Only with special state permits"],
+                answer: 1,
+                ref: "Section 2, Page 19",
+                quote: "Re-grooved, recapped, or retreaded tires on the front wheels of a bus are prohibited."
+            },
+            {
+                id: 116,
+                section: "Sec 2.1",
+                sectionName: "Section 2.1: Vehicle Inspection",
+                question: "What should you do with the starter switch key during the vehicle inspection when you are checking under the hood or cab?",
+                options: ["Leave it in the ignition running", "Put the key in your pocket so no one starts the vehicle while you are under it", "Give it to the examiner", "Leave it in the accessory position"],
+                answer: 1,
+                ref: "Section 2, Page 23 / Section 6, Page 88",
+                quote: "Make sure the parking brake is set, turn off the engine, and take the key with you."
+            },
+
+            // Section 2.2 - Basic Control of Your Vehicle
+            {
+                id: 117,
+                section: "Sec 2.2",
+                sectionName: "Section 2.2: Basic Control",
+                question: "When starting a manual transmission vehicle on a hill, how can you prevent rolling back?",
+                options: ["Rev the engine loudly", "Partly engage the clutch before taking your right foot off the brake or use the parking brake", "Keep transmission in neutral", "Use the trailer hand valve while driving"],
+                answer: 1,
+                ref: "Section 2, Page 26",
+                quote: "If you have a manual transmission vehicle, partly engage the clutch before you take your right foot off the brake. Put on the parking brake whenever necessary to keep from rolling back."
+            },
+            {
+                id: 118,
+                section: "Sec 2.2",
+                sectionName: "Section 2.2: Basic Control",
+                question: "When backing a trailer, which way do you turn the top of the steering wheel to make the trailer go left?",
+                options: ["To the left", "To the right", "Keep it centered", "Turn it fully clockwise"],
+                answer: 1,
+                ref: "Section 2, Page 83 / Section 2.2 notes",
+                quote: "When backing a car, straight truck, or bus, you turn the top of the steering wheel in the direction you want to go. When backing a trailer, you turn the steering wheel in the opposite direction."
+            },
+            {
+                id: 119,
+                section: "Sec 2.2",
+                sectionName: "Section 2.2: Basic Control",
+                question: "Why should you always try to back and turn toward the driver's side whenever possible?",
+                options: ["It saves fuel", "So you can see better by watching the rear out the side window", "It engages the automatic trailer locks", "It is faster"],
+                answer: 1,
+                ref: "Section 2, Page 27",
+                quote: "Back to the driver's side so that you can see better. Backing toward the right side is very dangerous because you cannot see as well. If you back and turn toward the driver's side, you can watch the rear of your vehicle by looking out the side window."
+            },
+            {
+                id: 120,
+                section: "Sec 2.2",
+                sectionName: "Section 2.2: Basic Control",
+                question: "How should you hold the steering wheel while driving a commercial vehicle?",
+                options: ["With one hand at the top", "Firmly with both hands on opposite sides of the wheel", "With your fingertips loosely", "With your arms crossed"],
+                answer: 1,
+                ref: "Section 2, Page 26",
+                quote: "Hold the steering wheel firmly with both hands. Your hands should be on opposite sides of the wheel. If you hit a curb or a pothole (chuckhole), the wheel could pull away from your hands unless you have a firm hold."
+            },
+            {
+                id: 121,
+                section: "Sec 2.2",
+                sectionName: "Section 2.2: Basic Control",
+                question: "What is important to agree upon with your helper before you begin backing?",
+                options: ["The hourly wage", "A set of hand signals that you both understand, including a clear signal for 'stop'", "The route to the destination", "The gear ratio"],
+                answer: 1,
+                ref: "Section 2, Page 27",
+                quote: "Before you begin backing, work out a set of hand signals that you both understand. Agree on a signal for 'stop.'"
+            },
+            {
+                id: 122,
+                section: "Sec 2.2",
+                sectionName: "Section 2.2: Basic Control",
+                question: "When acceleration traction is poor (such as in rain or snow), how should you speed up?",
+                options: ["Rapidly to pass through slick spots", "Very gradually so drive wheels do not spin", "In reverse gear", "Using full engine power"],
+                answer: 1,
+                ref: "Section 2, Page 26",
+                quote: "Speed up very gradually when traction is poor, as in rain or snow. If you use too much power, the drive wheels may spin. You could lose control."
+            },
+
+            // Section 2.3 - Shifting Gears
+            {
+                id: 123,
+                section: "Sec 2.3",
+                sectionName: "Section 2.3: Shifting Gears",
+                question: "What type of manual transmission requires double clutching?",
+                options: ["Synchronized manual transmission", "Unsynchronized manual transmission", "Automatic transmission", "Hydraulic power shift transmission"],
+                answer: 1,
+                ref: "Section 2, Page 27",
+                quote: "Most heavy vehicles with unsynchronized manual transmissions require double clutching to change gears. If equipped with a synchronized manual transmission, double clutching is NOT required."
+            },
+            {
+                id: 124,
+                section: "Sec 2.3",
+                sectionName: "Section 2.3: Shifting Gears",
+                question: "What are the two main ways of knowing when to shift up?",
+                options: ["Engine speed (RPM) and road speed (MPH)", "Oil temperature and fuel level", "Air tank pressure and coolant temperature", "Steering wheel play and tire wear"],
+                answer: 0,
+                ref: "Section 2, Page 27",
+                quote: "There are two ways of knowing when to shift: 1. Use engine speed (rpm)... 2. Use road speed (mph)"
+            },
+            {
+                id: 125,
+                section: "Sec 2.3",
+                sectionName: "Section 2.3: Shifting Gears",
+                question: "When should you downshift your manual transmission?",
+                options: ["Only when accelerating on a straightaway", "Before starting down a hill or before entering a curve", "Whenever you reach top speed on the highway", "Only when parking the vehicle"],
+                answer: 1,
+                ref: "Section 2, Page 27-28",
+                quote: "Special conditions where you should downshift are: 1. Before starting down a hill... 2. Before Entering a Curve"
+            },
+            {
+                id: 126,
+                section: "Sec 2.3",
+                sectionName: "Section 2.3: Shifting Gears",
+                question: "What is 'progressive shifting'?",
+                options: ["Shifting into reverse while moving forward", "Shifting where the RPM at which you shift becomes higher as you move up in the gears", "Shifting without using the clutch pedal", "Shifting into neutral on downgrades"],
+                answer: 1,
+                ref: "Section 2, Page 27",
+                quote: "(Some newer vehicles use 'progressive' shifting: the rpm at which you shift becomes higher as you move up in the gears. Find out what is right for the vehicle you will operate.)"
+            },
+            {
+                id: 127,
+                section: "Sec 2.3",
+                sectionName: "Section 2.3: Shifting Gears",
+                question: "When are retarders active on vehicles equipped with them?",
+                options: ["Whenever the engine is turned on", "Whenever you let up on the accelerator pedal all the way", "Only when the brake pedal is depressed past halfway", "Only when the parking brake is set"],
+                answer: 1,
+                ref: "Section 2, Page 28",
+                quote: "When turned 'on,' retarders apply their braking power (to the drive wheels only) whenever you let up on the accelerator pedal all the way."
+            },
+            {
+                id: 128,
+                section: "Sec 2.3",
+                sectionName: "Section 2.3: Shifting Gears",
+                question: "When should you turn off vehicle retarders?",
+                options: ["When driving uphill", "When the road is wet, icy, or snow-covered (poor traction)", "When traveling above 55 mph", "When the air compressor is pumping"],
+                answer: 1,
+                ref: "Section 2, Page 28",
+                quote: "When your drive wheels have poor traction, the retarder may cause them to skid. Therefore, you should turn the retarder off whenever the road is wet, icy, or snow covered."
+            },
+
+            // Section 2.4 - Seeing
+            {
+                id: 129,
+                section: "Sec 2.4",
+                sectionName: "Section 2.4: Seeing",
+                question: "What distance ahead should most good drivers look in terms of time while traveling?",
+                options: ["2 to 4 seconds", "6 to 8 seconds", "12 to 15 seconds", "30 to 45 seconds"],
+                answer: 2,
+                ref: "Section 2, Page 28",
+                quote: "Most good drivers look at least 12 to 15 seconds ahead. That means looking ahead the distance you will travel in 12 to 15 seconds."
+            },
+            {
+                id: 130,
+                section: "Sec 2.4",
+                sectionName: "Section 2.4: Seeing",
+                question: "At highway speeds, what distance does looking 12 to 15 seconds ahead approximately equal?",
+                options: ["About one car length", "About one block", "About a quarter of a mile", "About one mile"],
+                answer: 2,
+                ref: "Section 2, Page 28",
+                quote: "At lower speeds, that's about one block. At highway speeds it's about a quarter of a mile."
+            },
+            {
+                id: 131,
+                section: "Sec 2.4",
+                sectionName: "Section 2.4: Seeing",
+                question: "When should mirror adjustments be checked and adjusted?",
+                options: ["While driving on the highway at 55 mph", "Prior to the start of any trip and only when the trailer(s) are straight", "Only after a fuel stop", "While backing up"],
+                answer: 1,
+                ref: "Section 2, Page 29",
+                quote: "Mirror adjustment should be checked prior to the start of any trip and can only be checked accurately when the trailer(s) are straight."
+            },
+            {
+                id: 132,
+                section: "Sec 2.4",
+                sectionName: "Section 2.4: Seeing",
+                question: "What optical characteristic is true about convex ('fisheye' or 'spot') mirrors?",
+                options: ["They make objects appear larger and closer than they are", "They show a wider area, but objects appear smaller and farther away than they really are", "They eliminate all blind spots completely", "They invert the reflected image"],
+                answer: 1,
+                ref: "Section 2, Page 29",
+                quote: "...everything appears smaller in a convex mirror than it would if you were looking at it directly. Things also seem farther away than they really are."
+            },
+            {
+                id: 133,
+                section: "Sec 2.4",
+                sectionName: "Section 2.4: Seeing",
+                question: "How many times should you check your mirrors when changing lanes?",
+                options: ["Only once before starting", "Before signaling, after signaling, right after starting the lane change, and after completing the lane change", "Only after you have finished changing lanes", "Only if someone honks"],
+                answer: 1,
+                ref: "Section 2, Page 29",
+                quote: "Check your mirrors: Before you change lanes... After you have signaled... Right after you start the lane change... After you complete the lane change."
+            },
+            {
+                id: 134,
+                section: "Sec 2.4",
+                sectionName: "Section 2.4: Seeing",
+                question: "What is a major danger of staring into your mirrors for too long while driving?",
+                options: ["It drains the truck battery", "You will travel quite a distance without knowing what's happening ahead", "It causes mirror vibration", "It deactivates the ABS system"],
+                answer: 1,
+                ref: "Section 2, Page 29",
+                quote: "Don't focus on the mirrors for too long. Otherwise, you will travel quite a distance without knowing what's happening ahead."
+            },
+            {
+                id: 135,
+                section: "Sec 2.4",
+                sectionName: "Section 2.4: Seeing",
+                question: "What should you do if a traffic light has been green for a long time as you approach it?",
+                options: ["Speed up to beat it before it changes", "Maintain constant speed and honk", "Start slowing down and be ready to stop", "Switch to high beams"],
+                answer: 2,
+                ref: "Section 2, Page 29",
+                quote: "If a traffic light has been green for a long time it will probably change before you get there. Start slowing down and be ready to stop."
+            },
+            {
+                id: 136,
+                section: "Sec 2.4",
+                sectionName: "Section 2.4: Seeing",
+                question: "Aside from checking surrounding traffic, what is another crucial reason to monitor your mirrors regularly?",
+                options: ["To check your trailer cargo and spot tire fires", "To check engine coolant temperature", "To see if your headlights are clean", "To monitor brake air compressor pressure"],
+                answer: 0,
+                ref: "Section 2, Page 29",
+                quote: "Check your vehicle: Use the mirrors to keep an eye on your tires. It is one way to spot a tire fire. If you're carrying open cargo, you can use the mirrors to check it."
+            },
+            {
+                id: 137,
+                section: "Sec 2.4",
+                sectionName: "Section 2.4: Seeing",
+                question: "Why is it important to look far enough ahead rather than just at the vehicle immediately in front of you?",
+                options: ["It prevents engine overheating", "Stopping or changing lanes takes a lot of distance, and you need room to make moves safely", "It allows you to use cruise control safely", "It prevents tire wear"],
+                answer: 1,
+                ref: "Section 2, Page 28",
+                quote: "Because stopping or changing lanes can take a lot of distance, knowing what the traffic is doing on all sides of you is very important. You need to look well ahead to make sure you have room to make these moves safely."
+            },
+            {
+                id: 138,
+                section: "Sec 2.4",
+                sectionName: "Section 2.4: Seeing",
+                question: "What should good drivers do regarding their attention span when looking ahead?",
+                options: ["Focus exclusively on vehicles 100 feet away", "Shift their attention back and forth, near and far", "Stare fixedly at tail lights", "Focus only on overhead road signs"],
+                answer: 1,
+                ref: "Section 2, Page 28",
+                quote: "Looking 12 to 15 seconds ahead doesn't mean not paying attention to things that are closer. Good drivers shift their attention back and forth, near and far."
+            },
+
+            // Section 2.5 - Communicating
+            {
+                id: 139,
+                section: "Sec 2.5",
+                sectionName: "Section 2.5: Communicating",
+                question: "Within how many minutes must you put out your emergency warning devices if you stop on a road or shoulder?",
+                options: ["Within 1 minute", "Within 5 minutes", "Within 10 minutes", "Within 30 minutes"],
+                answer: 2,
+                ref: "Section 2, Page 31",
+                quote: "If you must stop on a road or the shoulder of any road, you must put out your emergency warning devices within ten minutes."
+            },
+            {
+                id: 140,
+                section: "Sec 2.5",
+                sectionName: "Section 2.5: Communicating",
+                question: "What are the three good rules for using turn signals outlined in the manual?",
+                options: ["Signal early, signal continuously, and cancel your signal", "Signal only when turning left, flash headlights, honk twice", "Signal after turning, keep signal on permanently, use high beams", "Signal within 50 feet, cancel immediately, use hazard lights"],
+                answer: 0,
+                ref: "Section 2, Page 29 & 30",
+                quote: "There are three good rules for using turn signals: Signal early... Signal continuously... Cancel your signal."
+            },
+            {
+                id: 141,
+                section: "Sec 2.5",
+                sectionName: "Section 2.5: Communicating",
+                question: "What should you do if you see a hazard ahead that requires slowing down, to warn drivers behind you?",
+                options: ["Slam on your brakes hard", "Give a few light taps on the brake pedal enough to flash the brake lights", "Turn off your engine", "Pull onto the left shoulder"],
+                answer: 1,
+                ref: "Section 2, Page 30",
+                quote: "If you see a hazard that will require slowing down, warn the drivers behind by flashing your brake lights (a few light taps on the brake pedal)."
+            },
+            {
+                id: 142,
+                section: "Sec 2.5",
+                sectionName: "Section 2.5: Communicating",
+                question: "Why should you never try to 'help out' other drivers by signaling when it is safe for them to pass?",
+                options: ["It drains battery power", "You could cause an accident and be blamed legally", "It turns off your headlights automatically", "It is required by federal law"],
+                answer: 1,
+                ref: "Section 2, Page 30",
+                quote: "Some drivers try to help out others by signaling when it is safe to pass. You should not do this. You could cause an accident. You could be blamed..."
+            },
+            {
+                id: 143,
+                section: "Sec 2.5",
+                sectionName: "Section 2.5: Communicating",
+                question: "When parked at the side of the road at night, why should you never trust your taillights alone to give warning?",
+                options: ["Taillights burn out too quickly", "Drivers have crashed into parked vehicles thinking they were moving normally", "Taillights are illegal on shoulders", "State laws prohibit parking lights"],
+                answer: 1,
+                ref: "Section 2, Page 31",
+                quote: "Don't trust the taillights to give warning. Drivers have crashed into the rear of a parked vehicle because they thought it was moving normally."
+            },
+            {
+                id: 144,
+                section: "Sec 2.5",
+                sectionName: "Section 2.5: Communicating",
+                question: "When placing emergency warning triangles behind your vehicle, how should you hold them for your own safety?",
+                options: ["Hold them high above your head", "Hold them between yourself and the oncoming traffic", "Walk backwards with your eyes closed", "Place them while driving at 20 mph"],
+                answer: 1,
+                ref: "Section 2, Page 31",
+                quote: "When putting out the triangles, hold them between yourself and the oncoming traffic for your own safety. (So other drivers can see you.)"
+            },
+            {
+                id: 145,
+                section: "Sec 2.5",
+                sectionName: "Section 2.5: Communicating",
+                question: "What is the proper triangle placement distance for a stopped vehicle on a one-way or divided highway?",
+                options: ["10 feet, 100 feet, and 200 feet toward approaching traffic", "10 feet only", "100 feet and 500 feet", "10 feet, 50 feet, and 100 feet"],
+                answer: 0,
+                ref: "Section 2, Page 31",
+                quote: "If you must stop on or by a one-way or divided highway, place warning devices 10 feet, 100 feet, and 200 feet toward the approaching traffic."
+            },
+            {
+                id: 146,
+                section: "Sec 2.5",
+                sectionName: "Section 2.5: Communicating",
+                question: "What is the proper triangle placement distance if your view is obstructed by a hill or curve when stopped on a highway?",
+                options: ["Bring all triangles into the cab", "Move the rear-most triangle back down the road 100 to 500 feet so warning is provided", "Place triangles every 50 feet for 1 mile", "Double the distance in front"],
+                answer: 1,
+                ref: "Section 2, Page 31",
+                quote: "Back beyond any hill, curve, or other obstruction that prevents other drivers from seeing the vehicle within 500 feet. If line of sight view is obstructed due to hill or curve, move the rear-most triangle to a point back down the road..."
+            },
+            {
+                id: 147,
+                section: "Sec 2.5",
+                sectionName: "Section 2.5: Communicating",
+                question: "When passing a pedestrian, bicyclist, or vehicle, what assumption should you always make?",
+                options: ["Assume they see you clearly", "Assume they do not see you and could suddenly move in front of you", "Assume they will pull over immediately", "Assume they have right of way"],
+                answer: 1,
+                ref: "Section 2, Page 30",
+                quote: "Whenever you are about to pass a vehicle, pedestrian, or bicyclist, assume they don't see you. They could suddenly move in front of you."
+            },
+            {
+                id: 148,
+                section: "Sec 2.5",
+                sectionName: "Section 2.5: Communicating",
+                question: "When driving in hard-to-see conditions (at dawn, dusk, in rain or snow), what lights should you turn on?",
+                options: ["Headlights (low beams), not just identification or clearance lights", "Hazard flashers only", "High beams exclusively", "Interior dome lights"],
+                answer: 0,
+                ref: "Section 2, Page 30",
+                quote: "Turn on your lights. Use the headlights, not just the identification or clearance lights. Use the low beams..."
+            },
+
+            // Section 2.6 - Controlling Speed
+            {
+                id: 149,
+                section: "Sec 2.6",
+                sectionName: "Section 2.6: Controlling Speed",
+                question: "What three components make up total stopping distance?",
+                options: ["Perception distance + Reaction distance + Braking distance", "Braking distance + Skid distance + Lag distance", "Speed + Weight + Friction", "Reaction time + Tire wear + Road grade"],
+                answer: 0,
+                ref: "Section 2, Page 32",
+                quote: "Perception Distance + Reaction Distance + Braking Distance = Total Stopping Distance"
+            },
+            {
+                id: 150,
+                section: "Sec 2.6",
+                sectionName: "Section 2.6: Controlling Speed",
+                question: "When you double your speed from 20 to 40 mph, how much greater is the impact and braking distance?",
+                options: ["2 times greater", "3 times greater", "4 times greater", "16 times greater"],
+                answer: 2,
+                ref: "Section 2, Page 32",
+                quote: "When you double your speed from 20 to 40 mph the impact is 4 times greater. The braking distance is also 4 times longer."
+            },
+            {
+                id: 151,
+                section: "Sec 2.6",
+                sectionName: "Section 2.6: Controlling Speed",
+                question: "How much should you reduce your speed on a wet road compared to a dry road?",
+                options: ["By about 10%", "By about one-third (e.g., from 55 to about 35 mph)", "By one-half", "No speed reduction needed if using treaded tires"],
+                answer: 1,
+                ref: "Section 2, Page 33",
+                quote: "Reduce speed by about one-third (e.g., slow from 55 to about 35 mph) on a wet road. On packed snow, reduce speed by a half, or more."
+            },
+            {
+                id: 152,
+                section: "Sec 2.6",
+                sectionName: "Section 2.6: Controlling Speed",
+                question: "What road condition features a thin layer of ice clear enough that you can see the road underneath?",
+                options: ["Black ice", "White frost", "Glaze ice", "Slush"],
+                answer: 0,
+                ref: "Section 2, Page 33",
+                quote: "Black Ice. Black ice is a thin layer that is clear enough that you can see the road underneath it. It makes the road look wet."
+            },
+            {
+                id: 153,
+                section: "Sec 2.6",
+                sectionName: "Section 2.6: Controlling Speed",
+                question: "Why do empty trucks require greater stopping distances than fully loaded trucks?",
+                options: ["Empty trucks have bigger engines", "An empty vehicle has less traction because of stiff suspension springs and strong brakes", "Empty trucks have lower center of gravity", "Empty trucks have wider tires"],
+                answer: 1,
+                ref: "Section 2, Page 32",
+                quote: "Empty trucks require greater stopping distances because an empty vehicle has less traction. (When lightly loaded, the very stiff suspension springs and strong brakes give poor traction...)"
+            },
+            {
+                id: 154,
+                section: "Sec 2.6",
+                sectionName: "Section 2.6: Controlling Speed",
+                question: "What is the number one cause of injury and death in roadway work zones?",
+                options: ["Bad weather", "Speeding traffic", "Narrow lanes", "Heavy equipment"],
+                answer: 1,
+                ref: "Section 2, Page 34",
+                quote: "Speeding traffic is the number one cause of injury and death in roadway work zones."
+            },
+            {
+                id: 155,
+                section: "Sec 2.6",
+                sectionName: "Section 2.6: Controlling Speed",
+                question: "What should you do if your vehicle begins to hydroplane on standing water?",
+                options: ["Apply service brakes hard immediately", "Release the accelerator and push in the clutch to let wheels turn freely without braking", "Turn steering wheel sharply", "Shift into reverse"],
+                answer: 1,
+                ref: "Section 2, Page 33",
+                quote: "You can regain control by releasing the accelerator and pushing in the clutch. This will slow your vehicle and let the wheels turn freely. If the vehicle is hydroplaning, do not use the brakes to slow down."
+            },
+            {
+                id: 156,
+                section: "Sec 2.6",
+                sectionName: "Section 2.6: Controlling Speed",
+                question: "When going down a long, steep downgrade, what should be your principal way of controlling your vehicle speed?",
+                options: ["Continuous foot braking", "The braking effect of the engine", "Pulling the emergency parking brake", "Riding the retarder on wet or icy roads"],
+                answer: 1,
+                ref: "Section 2, Page 34",
+                quote: "You must use the braking effect of the engine as the principal way of controlling your speed on downgrades. The braking effect of the engine is greatest when it is near the governed rpms and the transmission is in the lower gears."
+            },
+            {
+                id: 157,
+                section: "Sec 2.6",
+                sectionName: "Section 2.6: Controlling Speed",
+                question: "At what speed can hydroplaning occur if there is a significant amount of standing water on the road?",
+                options: ["Speeds as low as 30 mph", "Only above 55 mph", "Only above 70 mph", "Speeds below 15 mph"],
+                answer: 0,
+                ref: "Section 2, Page 33",
+                quote: "It does not take a lot of water to cause hydroplaning. Hydroplaning can occur at speeds as low as 30 mph if there is a lot of water."
+            },
+            {
+                id: 158,
+                section: "Sec 2.6",
+                sectionName: "Section 2.6: Controlling Speed",
+                question: "When should you downshift your manual transmission when descending a mountain grade?",
+                options: ["After your speed has built up past the speed limit", "Before starting down the hill", "Only when you smell burning brake linings", "When you reach the bottom of the grade"],
+                answer: 1,
+                ref: "Section 2, Page 34",
+                quote: "Shift your transmission to a low gear before starting down the grade and use the proper braking techniques."
+            },
+
+            // Section 2.7 - Managing Space
+            {
+                id: 159,
+                section: "Sec 2.7",
+                sectionName: "Section 2.7: Managing Space",
+                question: "What is the timed interval following distance rule for speeds under 40 mph for a heavy commercial vehicle?",
+                options: ["1 second for every 10 feet of vehicle length", "2 seconds fixed interval", "3 seconds regardless of length", "1 second for every 5 feet of vehicle length"],
+                answer: 0,
+                ref: "Section 2, Page 34",
+                quote: "One good rule says you need at least one second for each 10 feet of vehicle length at speeds below 40 mph."
+            },
+            {
+                id: 160,
+                section: "Sec 2.7",
+                sectionName: "Section 2.7: Managing Space",
+                question: "When traveling at speeds over 40 mph, what additional following distance rule must you apply using the vehicle length formula?",
+                options: ["Subtract 1 second", "Add 1 second for the additional speed", "Double the total seconds", "No change is required"],
+                answer: 1,
+                ref: "Section 2, Page 34",
+                quote: "Above 40 MPH use same formula [1 second for each 10 feet of vehicle length], then add 1 second for the additional speed."
+            },
+            {
+                id: 161,
+                section: "Sec 2.7",
+                sectionName: "Section 2.7: Managing Space",
+                question: "According to accident reports, what is the vehicle that trucks and buses most often run into?",
+                options: ["Pedestrians crossing streets", "Parked vehicles on shoulders", "The vehicle in front of them", "Vehicles pulling out of driveways"],
+                answer: 2,
+                ref: "Section 2, Page 34",
+                quote: "According to accident reports, the vehicle that trucks and buses most often run into is the one in front of them. The most frequent cause is following too closely."
+            },
+            {
+                id: 162,
+                section: "Sec 2.7",
+                sectionName: "Section 2.7: Managing Space",
+                question: "What should you do if you are being tailgated by another motorist?",
+                options: ["Speed up to pull away from them quickly", "Slam on your brakes to scare them off", "Avoid quick changes, increase your following distance in front, and do not speed up", "Turn off all your exterior lights"],
+                answer: 2,
+                ref: "Section 2, Page 35",
+                quote: "If you find yourself being tailgated, here are some things you can do to reduce the chances of a crash: Avoid quick changes... Increase your following distance... Don't speed up... Avoid tricks."
+            },
+            {
+                id: 163,
+                section: "Sec 2.7",
+                sectionName: "Section 2.7: Managing Space",
+                question: "Why should you stay in the right lane when going uphill if a heavy load is slowing you down?",
+                options: ["To comply with bridge toll rules", "Because heavy vehicles are frequently tailgated when they cannot keep up with traffic speed", "To allow cars to pass you on the left shoulder", "To keep your exhaust away from guardrails"],
+                answer: 1,
+                ref: "Section 2, Page 35",
+                quote: "Heavy vehicles are often tailgated when they can't keep up with the speed of traffic. This often happens when you're going uphill. If a heavy load is slowing you down, stay in the right lane if you can."
+            },
+            {
+                id: 164,
+                section: "Sec 2.7",
+                sectionName: "Section 2.7: Managing Space",
+                question: "What is a major danger of driving alongside other vehicles in traffic?",
+                options: ["It causes tire wear due to turbulence", "Another driver may change lanes suddenly and turn into you, or you may be trapped", "It drains the alternator", "It violates highway patrol rules"],
+                answer: 1,
+                ref: "Section 2, Page 35",
+                quote: "There are two dangers in traveling alongside other vehicles: Another driver may change lanes suddenly and turn into you. You may be trapped when you need to change lanes."
+            },
+            {
+                id: 165,
+                section: "Sec 2.7",
+                sectionName: "Section 2.7: Managing Space",
+                question: "Why can an empty cargo van have different overhead clearance than a loaded cargo van?",
+                options: ["The weight of cargo changes the physical height of the vehicle", "Empty vans have roof racks attached", "Loaded vans inflate tires more", "Suspension springs expand when empty, raising the vehicle height"],
+                answer: 3,
+                ref: "Section 2, Page 35",
+                quote: "The weight of a cargo van changes its height. An empty van is higher than a loaded one. That you got under a bridge when you were loaded does not mean that you can do it when you are empty."
+            },
+            {
+                id: 166,
+                section: "Sec 2.7",
+                sectionName: "Section 2.7: Managing Space",
+                question: "When making a right turn in a large vehicle, why should you keep the rear of your vehicle close to the curb?",
+                options: ["To let cars pass you on the left", "To stop other drivers from passing you on the right", "To activate road sensors", "To align with trailer landing gear"],
+                answer: 1,
+                ref: "Section 2, Page 36",
+                quote: "If you are driving a truck or bus that cannot make the right turn without swinging into another lane, turn wide as you complete the turn. Keep the rear of your vehicle close to the curb. This will stop other drivers from passing you on the right."
+            },
+            {
+                id: 167,
+                section: "Sec 2.7",
+                sectionName: "Section 2.7: Managing Space",
+                question: "What is the correct method for executing a right turn if your vehicle is too wide to make it normally?",
+                options: ["Turn wide to the left as you start the turn", "Turn wide as you complete the turn while keeping the rear close to the curb", "Stop completely, wait for police escort", "Use the oncoming lane for the entire turn"],
+                answer: 1,
+                ref: "Section 2, Page 36",
+                quote: "Turn wide as you complete the turn. Keep the rear of your vehicle close to the curb. This will stop other drivers from passing you on the right. Don't turn wide to the left as you start the turn."
+            },
+            {
+                id: 168,
+                section: "Sec 2.7",
+                sectionName: "Section 2.7: Managing Space",
+                question: "When making a left turn at an intersection with two turning lanes, which lane should you always take?",
+                options: ["The left-most lane", "The center lane", "The right turn lane", "Whichever lane has less traffic"],
+                answer: 2,
+                ref: "Section 2, Page 36",
+                quote: "If there are two turning lanes, always take the right turn lane. Don't start in the inside lane because you may have to swing right to make the turn."
+            },
+
+            // Section 2.8 - Seeing Hazards
+            {
+                id: 169,
+                section: "Sec 2.8",
+                sectionName: "Section 2.8: Seeing Hazards",
+                question: "What is defined as any road condition or other road user that is a possible danger?",
+                options: ["A hazard", "An obstruction", "A blind spot", "A traffic conflict"],
+                answer: 0,
+                ref: "Section 2, Page 37",
+                quote: "A hazard is any road condition or other road user (driver, bicyclist, pedestrian) that is a possible danger."
+            },
+            {
+                id: 170,
+                section: "Sec 2.8",
+                sectionName: "Section 2.8: Seeing Hazards",
+                question: "What do move-over laws require drivers to do when approaching a roadside emergency vehicle or work zone?",
+                options: ["Speed up to clear the lane quickly", "Proceed with caution by slowing and yielding the right-of-way by making a lane change into a non-adjacent lane", "Honk the horn continuously", "Stop completely on the highway"],
+                answer: 1,
+                ref: "Section 2, Page 37",
+                quote: "When approaching an authorized emergency vehicle stopped on the roadside or a work zone, you should proceed with caution by slowing and yielding the right-of-way by making a lane change into a lane not next to that of the authorized emergency vehicle or work zone..."
+            },
+            {
+                id: 171,
+                section: "Sec 2.8",
+                sectionName: "Section 2.8: Seeing Hazards",
+                question: "Why are freeway and turnpike exit ramps particularly dangerous for commercial vehicles?",
+                options: ["They have no speed limits", "They often go downhill and curve at the same time, making it difficult to reduce speed", "They are always unpaved", "They require backing up"],
+                answer: 1,
+                ref: "Section 2, Page 37",
+                quote: "Exits that go downhill and turn at the same time can be especially dangerous. The downgrade makes it difficult to reduce speed. Braking and turning at the same time can be a dangerous practice."
+            },
+            {
+                id: 172,
+                section: "Sec 2.8",
+                sectionName: "Section 2.8: Seeing Hazards",
+                question: "What symbol identifies a slow-moving vehicle?",
+                options: ["A flashing green circle", "A red triangle with an orange center", "A yellow square with black stripes", "A blue diamond"],
+                answer: 1,
+                ref: "Section 2, Page 38",
+                quote: "Some vehicles, by their nature, are slow and seeing them is a hazard clue (mopeds, farm machinery, construction machinery, tractors, etc.). Some of these will have the 'slow moving vehicle' symbol to warn you. This is a red triangle with an orange center."
+            },
+            {
+                id: 173,
+                section: "Sec 2.8",
+                sectionName: "Section 2.8: Seeing Hazards",
+                question: "What should you always do when you see a hazard on the road ahead?",
+                options: ["Ignore it and maintain speed", "Think about the emergencies that could develop and figure out what you would do (have a plan)", "Pull onto the left shoulder immediately", "Flash your high beams"],
+                answer: 1,
+                ref: "Section 2, Page 38",
+                quote: "When you see a hazard, think about the emergencies that could develop and figure out what you would do. Always be prepared to take action based on your plans."
+            },
+            {
+                id: 174,
+                section: "Sec 2.8",
+                sectionName: "Section 2.8: Seeing Hazards",
+                question: "What is a 'conflict' when driving a commercial vehicle?",
+                options: ["An argument with a passenger", "When you have to change speed and/or direction to avoid hitting someone", "A mechanical failure in the engine", "A dispute over cargo delivery times"],
+                answer: 1,
+                ref: "Section 2, Page 38",
+                quote: "You are in conflict when you have to change speed and/or direction to avoid hitting someone. Conflicts occur at intersections where vehicles meet, at merges..."
+            },
+            {
+                id: 175,
+                section: "Sec 2.8",
+                sectionName: "Section 2.8: Seeing Hazards",
+                question: "Why should you watch rental trucks very carefully in traffic?",
+                options: ["They have mechanical defects", "Their drivers are often not used to the limited vision they have to the sides and rear", "They carry hazardous materials", "They drive extremely fast"],
+                answer: 1,
+                ref: "Section 2, Page 37",
+                quote: "Rental trucks should be watched carefully. Their drivers are often not used to the limited vision they have to the sides and rear of the truck."
+            },
+            {
+                id: 176,
+                section: "Sec 2.8",
+                sectionName: "Section 2.8: Seeing Hazards",
+                question: "What is a major hazard associated with pavement drop-offs near the edge of the road?",
+                options: ["They cause flat tires instantly", "They can tilt your vehicle toward the side and cause the top to hit roadside objects or make steering difficult", "They flood the engine", "They cause brake fluid leaks"],
+                answer: 1,
+                ref: "Section 2, Page 37",
+                quote: "Driving too near the edge can tilt your vehicle toward the side of the road. This can cause the top of your vehicle to hit roadside objects (signs, tree limbs). Also, it can be hard to steer as you cross the drop off..."
+            },
+            {
+                id: 177,
+                section: "Sec 2.8",
+                sectionName: "Section 2.8: Seeing Hazards",
+                question: "Why are delivery truck drivers (step vans, postal vehicles) considered potential traffic hazards?",
+                options: ["They never use turn signals", "Packages or vehicle doors block their vision, and they are often in a hurry and may suddenly step out", "They are too heavy for bridges", "They only operate at night"],
+                answer: 1,
+                ref: "Section 2, Page 37",
+                quote: "Packages or vehicle doors often block the driver’s vision. Drivers of step vans, postal vehicles, and local delivery vehicles often are in a hurry and may suddenly step out of their vehicle or drive their vehicle into the traffic lane."
+            },
+            {
+                id: 178,
+                section: "Sec 2.8",
+                sectionName: "Section 2.8: Seeing Hazards",
+                question: "What are some common clues indicating that a driver is confused?",
+                options: ["Driving at a steady 55 mph", "Stopping in the middle of a block, looking at street signs or maps, and using brakes often", "Using cruise control on the highway", "Keeping a safe following distance"],
+                answer: 1,
+                ref: "Section 2, Page 38",
+                quote: "Confused drivers often change direction suddenly or stop without warning... Unexpected actions (stopping in the middle of a block, changing lanes for no apparent reason)... driving very slowly, using brakes often, or stopping... looking at street signs, maps, and house numbers."
+            },
+
+            // Section 2.9 - Distracted Driving
+            {
+                id: 179,
+                section: "Sec 2.9",
+                sectionName: "Section 2.9: Distracted Driving",
+                question: "What percentage of brain energy does talking on a cell phone (even hands-free) sap from safe driving?",
+                options: ["10%", "25%", "39%", "75%"],
+                answer: 2,
+                ref: "Section 2, Page 40",
+                quote: "Research indicates that the burden of talking on a cell phone - even if it's hands-free - saps the brain of 39% of the energy it would ordinarily devote to safe driving."
+            },
+            {
+                id: 180,
+                section: "Sec 2.9",
+                sectionName: "Section 2.9: Distracted Driving",
+                question: "How many times greater are the odds of a safety-critical event (such as a crash or near-crash) when a CMV driver dials a mobile phone?",
+                options: ["2 times greater", "6 times greater", "12 times greater", "23.2 times greater"],
+                answer: 1,
+                ref: "Section 2, Page 41",
+                quote: "Research shows that the odds of being involved in a safety-critical event (e.g., crash, near-crash, unintentional lane deviation) is 6 times greater for CMV drivers who engage in dialing a mobile telephone while driving than for those who do not."
+            },
+            {
+                id: 181,
+                section: "Sec 2.9",
+                sectionName: "Section 2.9: Distracted Driving",
+                question: "How many times greater are the odds of a safety-critical event when a CMV driver engages in texting while driving?",
+                options: ["6 times greater", "10 times greater", "15 times greater", "23.2 times greater"],
+                answer: 3,
+                ref: "Section 2, Page 41",
+                quote: "Research shows that the odds of being involved in a safety-critical event (e.g., crash, near-crash, unintentional lane deviation) is 23.2 times greater for CMV drivers who engage in texting while driving than for those who do not."
+            },
+            {
+                id: 182,
+                section: "Sec 2.9",
+                sectionName: "Section 2.9: Distracted Driving",
+                question: "When sending or receiving text messages, how many seconds on average do drivers take their eyes off the forward roadway?",
+                options: ["1.2 seconds", "2.5 seconds", "3.8 seconds", "4.6 seconds"],
+                answer: 3,
+                ref: "Section 2, Page 41",
+                quote: "Sending or receiving text takes your eyes from the road for an average of 4.6 seconds. At 55 mph, you would travel 371 feet, or the length of an entire football field – without looking at the roadway."
+            },
+            {
+                id: 183,
+                section: "Sec 2.9",
+                sectionName: "Section 2.9: Distracted Driving",
+                question: "What are the three main types of driver distractions?",
+                options: ["Visual, auditory, tactile", "Physical, mental, and both physical and mental simultaneously", "Internal, external, and mechanical", "Audio, video, and manual"],
+                answer: 1,
+                ref: "Section 2, Page 40",
+                quote: "There are many causes of distraction, all with the potential to increase risk. ✓ Physical distraction – one that causes you to take your hands off the wheel or eyes off the road, such as reaching for an object. ✓ Mental distraction – activities that take your mind away from the road, such as engaging in conversation with a passenger or thinking about something that happened during the day. ✓ Both physical and mental distraction – even greater chance a crash could happen, such as talking on a cell phone; or sending or reading text messages."
+            },
+            {
+                id: 184,
+                section: "Sec 2.9",
+                sectionName: "Section 2.9: Distracted Driving",
+                question: "What is the penalty for motor carriers if they require or allow their drivers to use hand-held mobile telephones while driving?",
+                options: ["Up to $1,000 fine", "Civil penalties in an amount up to $11,000", "Mandatory business audit", "Loss of corporate charter"],
+                answer: 1,
+                ref: "Section 2, Page 41",
+                quote: "Additionally, motor carriers are prohibited from requiring or allowing drivers of CMVs to use hand-held mobile telephones... Employers may also be subject to civil penalties in an amount up to $11,000."
+            },
+            {
+                id: 185,
+                section: "Sec 2.9",
+                sectionName: "Section 2.9: Distracted Driving",
+                question: "What is the only exception allowing a CMV driver to use a hand-held mobile telephone or text while driving?",
+                options: ["When driving on empty rural highways", "In an emergency exception to communicate with law enforcement officials or other emergency services", "When stopped at a red traffic light", "When delayed by highway construction"],
+                answer: 1,
+                ref: "Section 2, Page 41",
+                quote: "There is an emergency exception that allows you to use your hand-held mobile telephones if necessary to communicate with law enforcement officials or other emergency services."
+            },
+            {
+                id: 186,
+                section: "Sec 2.9",
+                sectionName: "Section 2.9: Distracted Driving",
+                question: "According to driver safety studies, what happens to the risk of a crash if drivers react even a half-second slower because of distractions?",
+                options: ["Crashes increase by 25%", "Crashes double", "Crashes triple", "Crashes increase tenfold"],
+                answer: 1,
+                ref: "Section 2, Page 41",
+                quote: "If drivers react a half-second slower because of distractions, crashes double."
+            },
+            {
+                id: 187,
+                section: "Sec 2.9",
+                sectionName: "Section 2.9: Distracted Driving",
+                question: "When dialing a mobile telephone while driving, how many seconds on average do drivers take their eyes off the forward roadway?",
+                options: ["1.5 seconds", "2.1 seconds", "3.8 seconds", "5.0 seconds"],
+                answer: 2,
+                ref: "Section 2, Page 41",
+                quote: "Dialing drivers took their eyes off the forward roadway for an average of 3.8 seconds. At 55 mph (or 80.7 feet per second), this equates to a driver traveling 306 feet, the approximate length of a football field, without looking at the roadway."
+            },
+            {
+                id: 188,
+                section: "Sec 2.9",
+                sectionName: "Section 2.9: Distracted Driving",
+                question: "What is the disqualification penalty for a second conviction of texting while operating a CMV within 3 years?",
+                options: ["30 days", "60 days", "120 days", "1 year"],
+                answer: 1,
+                ref: "Section 2, Page 41",
+                quote: "Your CDL will be disqualified after two or more convictions of any state law on texting while operating a CMV. Disqualification is 60 days for the second offense within 3 years and 120 days for three or more offenses within 3 years."
+            },
+
+            // Section 2.10 - Aggressive Drivers / Road Rage (Newly Added Expanded Questions)
+            {
+                id: 189,
+                section: "Sec 2.10",
+                sectionName: "Section 2.10: Aggressive Driving",
+                question: "What is the official definition of aggressive driving?",
+                options: ["Driving 15 mph over the posted speed limit", "Operating a motor vehicle in a selfish, bold, or pushy manner, without regard for the rights or safety of others", "Driving while fatigued or drowsy", "Honking at slow vehicles in the left lane"],
+                answer: 1,
+                ref: "Section 2, Page 42",
+                quote: "Aggressive driving is the act of operating a motor vehicle in a selfish, bold, or pushy manner, without regard for the rights or safety of others (i.e. changing lanes frequently and abruptly without notice)."
+            },
+            {
+                id: 190,
+                section: "Sec 2.10",
+                sectionName: "Section 2.10: Aggressive Driving",
+                question: "What distinguishes 'road rage' from 'aggressive driving'?",
+                options: ["Road rage occurs only at night", "Road rage is operating a motor vehicle with the intent of doing harm to others or physically assaulting a driver or their vehicle", "Road rage is limited to speeding offenses", "There is no difference"],
+                answer: 1,
+                ref: "Section 2, Page 42",
+                quote: "Road rage is operating a motor vehicle with the intent of doing harm to others or physically assaulting a driver or their vehicle."
+            },
+            {
+                id: 191,
+                section: "Sec 2.10",
+                sectionName: "Section 2.10: Aggressive Driving",
+                question: "What should you do first and foremost when confronted by an aggressive driver?",
+                options: ["Honk your horn to warn them away", "Make every attempt to get out of their way", "Flash your high beams", "Slam on your brakes"],
+                answer: 1,
+                ref: "Section 2, Page 42",
+                quote: "When confronted by an aggressive driver: First and foremost, make every attempt to get out of their way."
+            },
+            {
+                id: 192,
+                section: "Sec 2.10",
+                sectionName: "Section 2.10: Aggressive Driving",
+                question: "How should you handle eye contact and gestures when confronted by an aggressive driver?",
+                options: ["Make direct eye contact and gesture calmly", "Avoid eye contact, ignore gestures, and refuse to react to them", "Roll down your window and shout apologies", "Shake your head in disapproval"],
+                answer: 1,
+                ref: "Section 2, Page 42",
+                quote: "Avoid eye contact. Ignore gestures and refuse to react to them."
+            },
+            {
+                id: 193,
+                section: "Sec 2.10",
+                sectionName: "Section 2.10: Aggressive Driving",
+                question: "What are some recommended ways to reduce your stress before and while you drive?",
+                options: ["Listen to upbeat heavy metal music", "Listen to 'easy listening' music, be realistic about travel time, and give other drivers the benefit of the doubt", "Drink strong coffee and energy drinks", "Drive faster to make up for lost time"],
+                answer: 1,
+                ref: "Section 2, Page 42",
+                quote: "Reduce your stress before and while you drive. Listen to 'easy listening' music... Be realistic about your travel time... Give other drivers the benefit of the doubt."
+            },
+            {
+                id: 194,
+                section: "Sec 2.10",
+                sectionName: "Section 2.10: Aggressive Driving",
+                question: "If another driver seems eager to get in front of you in heavy traffic, what attitude should you adopt?",
+                options: ["Block them so they learn patience", "Say, 'Be my guest'", "Report them to the police immediately", "Honk and flash your lights"],
+                answer: 1,
+                ref: "Section 2, Page 42",
+                quote: "Be a cautious and courteous driver. If another driver seems eager to get in front of you, say, 'Be my guest.' This response will soon become a habit and you won't be as offended by other drivers' actions."
             },
 
             // Section 3
@@ -806,7 +1746,7 @@
                 quote: "Before driving a vehicle with a dual air system, allow time for the air compressor to build up a minimum of 100 psi pressure in both the primary and secondary systems."
             },
 
-            // Section 6 (Combination Vehicles) - Expanded Set
+            // Section 6 (Combination Vehicles)
             {
                 id: 47,
                 section: "Sec 6",
@@ -1650,10 +2590,10 @@
             
             const msg = document.getElementById('quiz-score-message');
             if (percentage >= 80) {
-                msg.innerText = "Fantastic job! You passed the 80% passing threshold for the CDL exam.";
+                msg.innerText = "Fantastic job! You passed the 80% passing threshold for the CDL-A exam.";
                 msg.className = "text-xs text-emerald-400 font-semibold mt-2";
             } else {
-                msg.innerText = "Keep studying! You need at least 80% to pass the official CDL exam.";
+                msg.innerText = "Keep studying! You need at least 80% to pass the official CDL-A exam.";
                 msg.className = "text-xs text-rose-400 font-semibold mt-2";
             }
 
